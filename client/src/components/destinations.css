@@ -1,0 +1,675 @@
+
+.head-cont{
+    display: flex;
+    max-width: 100%;
+    height: 100vh;
+    position: relative;
+    top: 5.5rem;
+    overflow: hidden;
+}
+.search{
+    display: flex;
+    position: relative;
+    top: 5rem;
+    width: 100%;
+    height: 20rem;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.searchbar{
+    position: relative;
+    /* margin: 0rem 31.5rem; */
+    width: 35%;
+    padding: 0rem 2rem;
+    height: 6rem;
+    font-size: 3rem;
+    border-radius: 3rem;
+    border: none;
+    font-family: monospace;
+    box-shadow: 0rem 0rem 2rem;
+    outline: none;
+}
+
+
+.place-name{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    top: 0rem;
+    font-size: 15rem;
+    padding-left: 0rem;
+   
+}
+.fillup-img{
+    width: 50%;
+    height: 45vh;
+    margin: 0rem 58rem;
+    position: absolute;
+    top: 28rem;
+    border-radius: 3rem;
+    box-shadow: 0rem 0rem 1rem;
+}
+.fillup-img img{
+    border-radius: 3rem;
+}
+#search{
+    margin-left: -65rem;
+    border-radius: 3rem;
+    border: none;
+    background-color: white;
+    font-family: monospace;
+    box-shadow: 0rem 0rem 1rem;
+    height: 5rem;
+    width: 5%;
+    cursor: pointer;
+    animation-duration: 0.1s;
+    animation-iteration-count: 1;
+    
+}
+@keyframes searchanime {
+    0%{}
+    100%{
+        transform: scale3d(0.9,0.9,0.9);
+    }
+}
+.place-name h3{
+    margin: 0rem;
+    font-size: 10rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+
+}
+.img-cont{
+   
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.img-cont img{
+    width: 100%;
+    height: 100%;
+}
+.navbar-ul{
+    box-shadow: 0rem 0rem 2rem ;
+}
+.images-container{
+    width: 100%;
+    height: 75%;
+    left: 0%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    .loc-img{
+        width: 15%;
+        height: 40%;
+        box-shadow: 0rem 0rem 1rem;
+        margin-right: 5rem;
+        margin-bottom: 5rem;
+        border-radius: 1rem;
+        transition-duration: 0.2s;
+    }
+    .loc-img:hover{
+        width: 16%;
+        height: 41%;
+    }
+    .loc-img img{
+        width: 100%;
+        height: 100%;
+        border-radius: 1rem;
+    }
+    }
+.ourservices{
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    top: 10rem;
+    height: 60vh;
+    font-size: 4rem;
+}
+.ourservicesh2{
+    max-width: 100%;
+    display: flex;
+    position: relative;
+    top: 5rem;
+    height: 8vh;
+    font-size: 6rem;
+    text-align: center;
+    font-family: fantasy;
+    letter-spacing: 0.4rem;
+  
+}
+.ourservicesh2 h2{
+    margin: 0rem;
+    width: 100%;
+    text-align: center;
+}
+.service-cont{
+    width: 30%;
+    height: 100%;
+    overflow-y: scroll;
+}
+.service-cont p{
+    font-size: 2.8rem;
+    position: relative;
+    text-align: center;
+    
+    top: 0%;
+}
+.service-cont::-webkit-scrollbar{display: none;}
+.service-cont h4{
+    /* background-color: white; */
+   z-index: 1;
+   
+    position: sticky;
+    top: 0rem;
+    margin: 0.5rem;
+    text-align: center;
+    font-family: math;
+    letter-spacing: 0.3rem;
+
+}
+
+.hotel{
+    width: 90%;
+    height: 20%;
+    background-color: aliceblue;
+    margin: 3% 5%;
+    border-radius: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    box-Shadow:0rem 0rem 3rem;
+}
+.hotelimg{
+    width: 30%;
+    height: 100%;
+    background-color: antiquewhite;
+    border-radius: 3rem;
+}
+.hotelimg img{
+    height: 100%;
+    width: 100%;
+}
+.hotelname{
+    word-wrap: break-word;
+    width: 60%;
+    height: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    font-family: monospace;
+    letter-spacing: 0.1rem;
+    padding: 2%;
+    font-size: 3rem;
+    font-weight: 800;
+    left: 1rem;
+    text-align: left;
+}
+.hotels{
+    width: 90%;
+    height: 28%;
+    background-color: aliceblue;
+    margin: 3% 5%;
+    border-radius: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0rem 0rem 3rem;
+}
+.restaurant{
+    width: 90%;
+    height: 28%;
+    background-color: aliceblue;
+    margin: 3% 5%;
+    border-radius: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0rem 0rem 3rem;
+}
+.restimg{
+    width: 40%;
+    height: 100%;
+    background-color: antiquewhite;
+    border-radius: 3rem;
+    list-style: none;
+    margin-left: -0.5rem;
+}
+.restimg img{
+    height: 100%;
+    width: 100%;
+    border-radius: 3rem 0rem 0rem 3rem;
+    
+}
+
+.hotelname{
+    word-wrap: break-word;
+    width: 70%;
+    height: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: monospace;
+    letter-spacing: 0.1rem;
+    padding: 2%;
+    font-size: 3rem;
+  
+}
+.hotelprice{
+    word-wrap: break-word;
+    width: 70%;
+    height: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: monospace;
+    letter-spacing: 0.1rem;
+    padding: 2%;
+    font-size: 3rem;
+  
+}
+.restli{
+ display: flex;
+ flex-direction: column;
+ width: 60%;
+}
+.restname{
+    list-style: none;
+    word-wrap: break-word;
+    width: 90%;
+    height: 49%;
+    position: relative;
+    display: flex;
+    align-items: center;
+  
+    font-family: monospace;
+    letter-spacing: 0.1rem;
+    padding: 2%;
+    font-size: 3rem;
+    left: 0.5rem;
+    text-align: left;
+    font-weight: 800;
+}
+.rating{
+    list-style: none;
+    width: 4rem;
+    height: 2rem;
+    position: relative;
+    background-color: transparent;
+    font-size: 3rem;
+    top: -0.5rem;
+    left: 1rem;
+    font-family: monospace;
+}
+.webpage{
+    left: 1rem;
+    position: relative;
+    top: 2rem;
+    font-size: 3rem;
+    list-style: none;
+}
+.webpage a{
+    font-family: monospace;
+    color: teal;
+    text-decoration: none;
+}
+.propertyType{
+    width: 5rem;
+    background-color: transparent;
+    height: 3rem;
+    font-size: 2.5rem;
+    position: relative;
+    top: 2.2rem;
+    left: -15rem;
+    font-family: monospace;
+}
+
+.tourspot{
+    width: 90%;
+    height: 28%;
+    background-color: aliceblue;
+    margin: 3% 5%;
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0rem 0rem 3rem;
+}
+.tourspottitle{
+    list-style: none;
+    width: 90%;
+    padding-left: 0rem;
+    font-family: fantasy;
+    letter-spacing: 0.2rem;
+}
+.wikidata{
+    list-style: none;
+    font-size: 3rem;
+    font-family: monospace;
+    width: 93%;
+    padding-left: 5rem;
+}
+.wikidata a{
+    text-decoration: none;
+    color: teal;
+}
+.maps{
+    font-size: 3rem;
+    list-style: none;
+    width: 93%;
+    padding-left: 5rem;
+}
+.maps a{
+    text-decoration: none;
+    color: teal;
+}
+#hotels{
+    width: 80%;
+    margin-left: 10%;
+    font-family: monospace;
+    font-size: 3rem;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0rem 0rem 1rem;
+    background-color: rgb(80 84 119);
+    color: rgb(191 195 233);
+cursor: pointer;
+position: relative;
+top: 0rem;
+}#hotels:hover{transform: scale3d(1.01, 1.01, 1.01);}
+#inputdates{
+    width: 90%;
+    height: 5rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.enterdate{
+    height: 4rem;
+    font-size: 2.4rem;
+    font-family: monospace;
+    text-align: center;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+}
+#details{
+    width: 80%;
+    margin-left: 10%;
+    font-family: monospace;
+    font-size: 3rem;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0rem 0rem 1rem;
+    background-color: rgb(116 106 91);
+    color: rgb(255 229 188);
+cursor: pointer;
+position: relative;
+top: 0rem;
+
+}#details:hover{transform: scale3d(1.01, 1.01, 1.01);}
+#rests{
+    width: 80%;
+    margin-left: 10%;
+    font-family: monospace;
+    font-size: 3rem;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0rem 0rem 1rem;
+    background-color:#111154;
+    color: rgb(204 233 255);
+cursor: pointer;
+}#rests:hover{transform: scale3d(1.01, 1.01, 1.01);}
+
+.guide-cont{
+    position: relative;
+    top: 15rem;
+    max-width: 95%;
+    height: 50rem;
+    margin: auto;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    background-color: #f8c05a;
+}
+.guide-cont h3{
+    font-size: 5rem;
+    margin: 0;
+    text-align: center;
+    font-family: math;
+    position: sticky;
+    left: 0rem;
+}
+.guide-cont::-webkit-scrollbar{
+    height: 2rem;
+    background-color: darkgoldenrod;
+}
+.guideslide{
+    height: 80%;
+    margin-top: 1%;
+    width: 190%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top: 1%;
+}
+.guideslide li{
+    width: 30rem;
+    background-color: white;
+    /* border: 1px solid; */
+    height: 100%;
+    list-style: none;
+    cursor: pointer;
+}
+.guide-img{
+    width: 95%;
+    height: 70%;
+    margin:0% 2.5%;
+}
+.guidename{
+    width: 95%;
+    height: 4rem;
+    font-family: monospace;
+    font-size: 2rem;
+    text-align: center;
+    margin: 0% 2.5%;
+    font-size: 3rem;
+    font-weight: 700;
+}
+.exp{
+    height: 3rem;
+    font-size: 2rem;
+    font-family: monospace;
+    width: 95%;
+    margin: 0% 2.5%;
+    text-align: center;
+}
+.guide-price{
+    height: 4rem;
+    font-size: 3rem;
+    font-family: monospace;
+    font-weight: 800;
+    width: 95%;
+    margin: 0% 2.5%;
+    text-align: center;
+}
+
+.locmap{
+    width: 90%;
+    height: 40rem;
+    background-color: aqua;
+    position: relative;
+    top: 20rem;
+    margin: 0% 5%;
+}
+.notfound{
+    text-align: center;
+    font-size: 3rem;
+    font-family: monospace;
+    position: relative;
+    top: 30rem;
+}
+
+.foot{
+    top: 30rem;
+}
+
+.yourtrip{
+    /* margin: auto; */
+    width: fit-content;
+    min-height: 20rem;
+    margin: 0rem 2rem;
+    
+    height: auto;
+    position: relative;
+    /* top: 7rem; */
+    z-index: 2;
+   /* box-shadow: 1rem 1rem 3rem; */
+   border-radius: 3rem;
+    background-color: white;
+}
+#tripname{
+    width: 100%;
+    height: 4rem;
+    font-size: 5rem;
+    list-style: none;
+    text-align: center;
+    font-family: math;
+    position: relative;
+    margin-bottom: 2rem;
+}
+#triphotel1::before{
+    content: "🏩";
+}
+#tripguide1::before{
+    content: "👨🏻‍💼";
+}
+#noofdays{
+    /* position: absolute;
+    left: 85rem; */
+    border: none;
+    font-size: 2.5rem;
+    width: 50rem;
+    box-shadow: 0rem 0rem 1rem inset;
+    outline: none;
+    border-radius: 1rem;
+    text-indent: 1rem;
+    height: 3.5vh;
+    /* top: 3rem; */
+}
+#checkout{
+    /* position: absolute;
+        left: 85%;
+        top: 15.2rem; */
+        width: 25%;
+        border-radius: 1rem;
+        border: none;
+        box-shadow: 0rem 0rem 1rem;
+        background-color: teal;
+        color: aliceblue;
+        font-size: 3rem;
+        height: 5rem;
+        box-shadow: 0rem 0rem 1rem black;
+}
+#tourspot-selected{
+    background-color: #b7ffb7;
+}
+#tripcheck{
+    position: relative;
+    height: auto;
+    width: 90%;
+    left: 0.5%;
+    font-size: 3rem;
+    font-family: math;
+    margin-bottom: 1rem;
+    word-wrap: break-word;
+    /* background-color: antiquewhite; */
+}
+.total-price{
+    width: 25%;
+    position: relative;
+    font-size: 3rem;
+    /* top: -7rem; */
+    /* left: 28rem; */
+    /* border: 1px solid; */
+    display: flex;
+    align-items: center;
+    background-color: #ffd107;
+    border-radius: 1rem;
+    /* color: unset; */
+    box-shadow: 0rem 0rem 2rem inset;
+    /* text-align: center; */
+    justify-content: center;
+}
+.weather-initial{
+    /* position: sticky; */
+    position: relative;
+    width: fit-content;
+    height: auto;
+   box-shadow: 0rem 0rem 3rem black inset;
+    /* background-color: black; */
+    /* top: 7rem; */
+    /* margin-top: 8rem; */
+    border-radius: 3rem;
+    left: 1rem;
+    opacity: 88%;
+    z-index: 2;
+}
+#forecast{
+    display: none;
+}
+.currentweather:hover{
+    cursor: pointer;
+    #forecast{
+        display: block;
+    }
+}
+#moreinfo{
+       /* width: 90%; */
+       height: 4rem;
+       margin: 0% 16.5%;
+    color: white;
+    border: none;
+    background: transparent;
+    margin-top: 0.5rem;
+    border-radius: 1rem 1rem 1rem 1rem;
+    /* box-shadow: 0rem 0rem 1rem black; */
+    font-size: medium;
+}
+.loginconfirm{
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    font-family: fantasy;
+    background-color: red;
+    border: 1rem solid red;
+    box-sizing: border-box;
+    border-radius: 0rem 0rem 3rem 3rem;
+}
+.tripcheck-weather-cont{
+    padding: 0rem 1rem;
+    display: flex;
+    position: sticky;
+    top: 10rem;
+    align-items: center;
+    justify-content: space-around;
+    height: auto;
+    min-height: 30rem;
+width: fit-content;
+z-index: 2;
+background-color: white;
+margin: auto;
+box-sizing: content-box;
+box-shadow: 1rem 1rem 2rem;
+border-radius: 3rem;
+}

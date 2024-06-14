@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+.blogdiv{
+    position: relative;
+    top: 12rem;
+    max-width: 80%;
+    margin: auto;
+  margin-bottom: 2rem;
+}
+.sugarpineblog{
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: 3.5rem;
+    font-style: normal;
+}
+.travelblogcover{
+    width: 90%;
+    height: 50vh;
+    margin: 0rem 5%;
+    position: relative;
+    top: 10rem;
+    border-radius: 3rem;
+    box-shadow: 0rem 0rem 2rem;
+}
+.blogtitle{
+    font-size: 4rem;
+    font-family: monospace;
+    color: teal;
+}
+.blogtitle h3{
+    margin: auto;
+    margin-bottom: 2rem;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-size: 6rem;
+    font-style: normal;
+    background: linear-gradient(to right, #870033, #ff6b08, #730073, #e9d200);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.blogmatter p{
+    height: auto;
+    font-size: 3rem;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 0rem 2rem;
+    word-wrap: break-word;
+    font-family: monospace;
+}
+.blogimage{
+    height: 35vh;
+    width: 50%;
+    border-radius: 3rem;
+    margin: auto;
+}
+.blogimage img{
+    border-radius: 3rem;
+}
