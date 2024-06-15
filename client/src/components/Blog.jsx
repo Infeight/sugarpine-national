@@ -1,9 +1,23 @@
 import React from 'react'
 import Navbar from '../navbar'
+import { useState, useEffect } from 'react'
 import './blog.css'
 import Footer from '../footer/footer'
-import data1 from '../../../server/blogs.json'
+// import data1 from '../../../server/blogs.json'
 const Blog = () => {
+  const [blogdata,setBlogdata] = useState([]);
+
+  const blogs = async()=>{
+    let data = await fetch('http://localhost:5002/blogs')
+    let blogs = await data.json()
+    console.log(blogs.blogs)
+    setBlogdata(blogs.blogs)
+  }
+
+  useEffect(()=>{
+    blogs();
+  })
+
   return (
 
 
@@ -15,7 +29,7 @@ const Blog = () => {
       
       />
       
-   {data1&&data1.map((data)=>{
+   {blogdata&&blogdata.map((data)=>{
     console.log(data)
     return(
       <div className="blogdiv">

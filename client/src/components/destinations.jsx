@@ -15,7 +15,7 @@ import tourxid from '../../api/xid'
 import restaurants from '../../api/restaurants'
 import weatherreport from '../../api/weather'
 import { FaInstagram } from "react-icons/fa"
-import loggedindata from '../../../server/logindata.json'
+// import loggedindata from '../../../server/logindata.json'
 import emailjs from '@emailjs/browser';
 
 import Guides from './guides'
@@ -29,9 +29,10 @@ const Destinations = () => {
     lng: null
   })
 
-  // const [loggedin,setLoggedin] = useState(false)
   const form = useRef();
   const [map,setMap] = useState(null)
+
+  const [loggedindata,setLoggedindata] = useState([])
   const [locname,setLocname] = useState("")
   const [maindata,setMaindata] = useState([]);
   const [image,setImage] = useState([])
@@ -110,7 +111,7 @@ const[forecast3,setForecast3]=useState({
   }
 
   const handlesubmit = ()=>{
-
+    loggeduserdata();
     setShowtours(false)
     setMaindata([])
     setRestdata([])
@@ -179,6 +180,16 @@ document.getElementById("tourists").style.backgroundColor="rgb(255 225 180)"
       document.getElementById("restaurants1").style.backgroundColor="rgb(204 233 255)"
         document.getElementById("hotels1").style.backgroundColor="rgb(191 195 233)"
   }
+
+  const loggeduserdata = async ()=>{
+    let logindet ={
+    username: localStorage.getItem("loggeduser"),
+    Email: localStorage.getItem("logindet-mail")
+    }
+    let getlogins = [logindet]
+
+    setLoggedindata(getlogins)
+   }
 
 
   const  handledetails = ()=>{

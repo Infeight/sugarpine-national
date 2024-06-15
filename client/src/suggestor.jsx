@@ -20,17 +20,18 @@ const Suggestor = () => {
       setName({...name,[valuename]:value,})
      }
       
-    const updatename = ()=>{
+    const updatename = async()=>{
      
 
         let r= fetch('http://localhost:5002/' , {method:'post',headers:{"Content-Type": "application/json"} ,body:JSON.stringify(name)})
-      
+       
+      // console.log(r)
       document.getElementById('suggest').style.animationName ='clicked'
       document.getElementById("suggestor").value = ""
       document.getElementById("suggested-place").value = ""
       document.getElementById("write-suggestion").value = ""
       
-
+  //  let d = await fetch('http://localhost:5002/', {method:'get',headers:{"Content-Type": "application/json"}})
 
       
     }

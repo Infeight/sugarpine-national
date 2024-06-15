@@ -1,64 +1,138 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import  './header.css'
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import axios from 'axios'
 import Navbar from '../navbar.jsx';
-import loggeduser from '../../../server/logindata.json';
-const Head = () => {
-  
-  const logout = ()=>{
-    let q= fetch('http://localhost:5002/logout' , {method:'post',headers:{"Content-Type": "application/text"} ,body: loggeduser})
-    console.log(loggeduser)
-  }
-  
-  if(loggeduser.length!==0){
-    console.log(loggeduser);
-    return(
-      <>
-      <Navbar / >
-      <div className="head-back">
-         <div className="brand-cont">
-         <div className="brand-name" style={{fontSize:"6rem", textAlign:"center"}}>
-         Welcome to Sugarpine National {loggeduser[0].username}
-         </div>
-       
-  
-  
-     {/* <div className='welcomediv'></div> */}
-     <button id='logout' onClick={()=>{logout()}} >Logout</button>
-  
-  
-         </div>
-        {/* <div className="main-head-img">
-        
-          <img src="../../Goa.png" alt="" />
-        </div> */}
-       
-        
-      </div></>
-    );
-    
-  }
 
-else if (loggeduser.length==0){
-   
-  let[user,setUser] = useState({
+
+const Head = () => {
+
+  const [loginsent, setLoginsent] = useState(false)
+  useEffect(()=>{
+    loggeduserdata();
+
+  },[loginsent])
+
+let loggeduser1 = localStorage.getItem("loggeduser")
+
+console.log(loggeduser1)
+
+    const [loggeduser,setLoggeduser] = useState([])
+ 
+  let [user,setUser] = useState({
     username:"",
     Email: "",
     phone:"",
   })
+  const [loggeddata,setLoggeddata] = useState([]);
 
   let name; let value;
  const handleChange = (e) =>{
   name = e.target.name;
   value =e.target.value;
   setUser({...user,[name]:value})
+  
+ }
+
+// 
+
+
+
+ const logout = ()=>{
+  // if(loginsent == false){  setLoginsent(true)}
+  // else{
+  //   setLoginsent(false)
+  // }
+  setLoggeduser([])
+//  setLoginsent(false)
+  localStorage.setItem("loggeduser","");
+  localStorage.setItem("logindet-mail","" )
+  let q= fetch('http://localhost:5002/logout' , {method:'post',headers:{"Content-Type": "application/text"} ,body: loggeduser})
+
+
+}
+
+const loggeduserdata = async ()=>{
+  let alllogins = await fetch('http://localhost:5002/logins')
+  let getlogins = await alllogins.json()
+console.log("jhviuhoi")
+  getlogins.logins.forEach((elem)=>{
+    if(elem.Email === user.Email){
+      setLoggeduser([elem])
+      localStorage.setItem("loggeduser", elem.username) 
+     
+      localStorage.setItem("logindet-mail", elem.Email  )
+    }
+    
+  })
+
+
+ 
  }
 
 const senddata = () =>{
+  if(loginsent == false){  setLoginsent(true)}
+  else{
+    setLoginsent(false)
+  }
+
+  console.log("worked")
   let r= fetch('http://localhost:5002/login' , {method:'post',headers:{"Content-Type": "application/json"} ,body:JSON.stringify(user)})
-  console.log(user)
+  
 }
+
+if(loggeduser.length!=0){
+  
+  return(
+    <>
+    <Navbar / >
+    <div className="head-back">
+       <div className="brand-cont">
+       <div className="brand-name" style={{fontSize:"6rem", textAlign:"center"}}>
+       Welcome to Sugarpine National {loggeduser1}
+       </div>
+     
+
+
+   {/* <div className='welcomediv'></div> */}
+   <button id='logout' onClick={()=>{logout()}} >Logout</button>
+
+
+       </div>
+      
+     
+      
+    </div></>
+  );
+
+}
+
+else if(loggeduser1!=""){
+  
+  return(
+    <>
+    <Navbar / >
+    <div className="head-back">
+       <div className="brand-cont">
+       <div className="brand-name" style={{fontSize:"6rem", textAlign:"center"}}>
+       Welcome to Sugarpine National {loggeduser1}
+       </div>
+     
+
+
+   {/* <div className='welcomediv'></div> */}
+   <button id='logout' onClick={()=>{logout()}} >Logout</button>
+
+
+       </div>
+      
+     
+      
+    </div></>
+  );
+
+}
+
 
   return (
   <>
@@ -86,6 +160,6 @@ const senddata = () =>{
       
     </div>
     </>
-  )}}
+  )}
 
 export default Head

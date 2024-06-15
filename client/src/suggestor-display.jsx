@@ -1,15 +1,28 @@
 import React from 'react'
-import { useEffect } from 'react'
-import data from '../../server/suggestion.json'
+import { useEffect,useState } from 'react'
+import { FaEyeSlash } from 'react-icons/fa6'
+// import data from '../../server/suggestion.json'
 // import { connect, Schema, model } from 'mongoose';
 // import locations from '../backend/app.js'
 const Suggestordisplay = () => {
-  
- 
+const[suggestions,setSuggestions]= useState([]);
+
+const getsuggestions = async()=>{
+  let  data = await fetch('http://localhost:5002/suggestions')
+  let suggestions = await data.json();
+   // console.log(suggestions)
+   setSuggestions(suggestions.suggestions)
+}
+  useEffect(()=>{
+  getsuggestions();
+    
+      // let suggestion = suggestions.
+  })
+
 
   return(
 
-  data && data.map(data1 =>{
+  suggestions&& suggestions.map(data1 =>{
     return(
       <div className='display' key={data1._id}>
         <h3 className='suggestion-head'>{data1.place}</h3>

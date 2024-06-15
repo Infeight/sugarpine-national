@@ -19,12 +19,31 @@ const sep = ',\n'
 
 app.use(cors());
 app.use(bodyParser.json());
-app.get('/', (req, res) => {
-  res.send("hello")
+app.get('/',async (req, res) => {
+
+
+  res.send("suggestions")
 
  
 
 })
+app.get('/suggestions', async (req,res)=>{
+   const suggesteddata = await locations.locations.find({});
+   res.send({status:"ok", suggestions: suggesteddata})
+})
+
+app.get('/blogs', async (req,res)=>{
+    
+  const blogdata = await blogs.blogs.find({})
+  res.send({status: "ok", blogs: blogdata})
+})
+
+app.get('/logins', async (req,res)=>{
+    
+  const loginsdata = await logins.logins.find({})
+  res.send({status: "ok", logins: loginsdata})
+})
+
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
@@ -52,28 +71,25 @@ try{
   
     data.push(JSON.stringify(jsondata))
 
-   fs.writeFileSync("suggestion.json",`${data.join(sep)}`, err => {
-    if (err) {
-      console.error(err);
-    } else {
-      console.log("file written")
-    }
-  });}
+  //  fs.writeFileSync("suggestion.json",`${data.join(sep)}`, err => {
+  //   if (err) {
+  //     console.error(err);
+  //   } else {
+  //     console.log("file written")
+  //   }
+  // });
+  }
 
  }
 catch{console.log("try again")} })
 
-  app.get('/login',(req,res)=>{
-//    res.send(req)
-   
-  })
 
 
 
 let loginjsondata = []
-
+let logindata1;
   app.post('/login', async (req, res) => {
-   const  logindata1 = {
+    logindata1 = {
       username : req.body.username,
       Email: req.body.Email,
       phone: req.body.phone
@@ -89,13 +105,13 @@ let loginjsondata = []
         const login = "success"
         console.log("already user")
         
-        fs.writeFileSync('logindata.json',`[${JSON.stringify(logindata1)}]`, err => {
-            if (err) {
-              console.error(err);
-            } else {
-              console.log("file written")
-            }
-          });
+        // fs.writeFileSync('logindata.json',`[${JSON.stringify(logindata1)}]`, err => {
+        //     if (err) {
+        //       console.error(err);
+        //     } else {
+        //       console.log("file written")
+        //     }
+        //   });
 
       }
     }
@@ -112,14 +128,14 @@ let loginjsondata = []
   }
   catch{
     await logins.logins.insertMany(logindata1)
-    console.log(logindata1.Email)
-    fs.writeFileSync('logindata.json',`[${JSON.stringify(logindata1)}]`, err => {
-      if (err) {
-        console.error(err);
-      } else {
-        console.log("file written")
-      }
-    })
+    // console.log(logindata1.Email)
+    // fs.writeFileSync('logindata.json',`[${JSON.stringify(logindata1)}]`, err => {
+    //   if (err) {
+    //     console.error(err);
+    //   } else {
+    //     console.log("file written")
+    //   }
+    // })
 
 
   }
@@ -129,15 +145,15 @@ let loginjsondata = []
   try{
    const blogdata = await blogs.blogs.find();
   //  blogdataarr.push(JSON.stringify(blogdata))
-   fs.writeFileSync('blogs.json',`${JSON.stringify(blogdata)}`,(err)=>{
-    if(err){
-      console.log(err)
+  //  fs.writeFileSync('blogs.json',`${JSON.stringify(blogdata)}`,(err)=>{
+  //   if(err){
+  //     console.log(err)
   
-    }
-    else{
-      console.log("Success")
-    }
-   })
+  //   }
+  //   else{
+  //     console.log("Success")
+  //   }
+  //  })
   }  
   catch(err){
     console.log(err)
@@ -146,16 +162,19 @@ let loginjsondata = []
 
   })
 
+
+  
+
   app.post('/logout',(req,res)=>{
 //   console.log(req.body)
-  fs.writeFileSync('logindata.json',`[]`,err=>{
-    if(err){
-      console.log("err")
-    }
-    else{
-      console.log("loggedout")
-    }
-  })
+  // fs.writeFileSync('logindata.json',`[]`,err=>{
+  //   if(err){
+  //     console.log("err")
+  //   }
+  //   else{
+  //     console.log("loggedout")
+  //   }
+  // })
 
   })
  
