@@ -4,11 +4,44 @@ html{
     font-size: 41.5%;
     overflow-x: hidden;
 }
+body{
+    background: white;
+    background-size: 200%;
+    /* color: #fbae52; */
+    animation: bg-anim 7s infinite ease-in-out;
+}
+
+.bpw-floating-button {
+    box-shadow: none !important;
+    border: 1vw solid;
+    background-color: #ffd86a;
+}
+
+@keyframes bg-anim {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+    background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+#root{
+    max-width: 2100px;
+    margin: auto;
+    overflow-x: clip;
+}
+.navbar-btn{
+    display: none;
+}
 
 #logoname{
-    background: linear-gradient(to right, #000000, #ff0000);
+    color: #ffd86a;
+    /* background: linear-gradient(to right, #000000, #ff0000);
     -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
+    -webkit-background-clip: text; */
     font-family: "Exo 2", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
@@ -17,7 +50,7 @@ html{
 }
 #logoname:hover{
 
-    background: linear-gradient(to right, #f9d423, #ff4e50);
+    background: linear-gradient(to right, #ffd86a, #ff9a00);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
@@ -25,16 +58,16 @@ html{
 
 .nav-bar{
     position: sticky;
-    z-index: 2;
+    z-index: 4;
     top: 0rem;
     height: 0rem;
 }
 
 .navbar-ul{
-    backdrop-filter: blur(60px);
+    /* backdrop-filter: blur(60px); */
       display: flex;
       align-items: center;
-      /* background-color: #000000a3; */
+      background-color:#232F3E;
       margin: 0px;
       padding: 0px;
       justify-content: space-evenly;
@@ -54,7 +87,7 @@ html{
 .navbar-li{
     cursor: pointer;
     width: auto;
-    font-size: 4rem;
+    font-size: 2.5vw;
     list-style: none;
     font-family: math;
     margin: 0rem 2rem;
@@ -65,9 +98,10 @@ html{
 }
 .navbar-li a{
     text-decoration: none;
-    background: linear-gradient(to right, #000000, #ff0000);
+    color: #ffd86a;
+    /* background: linear-gradient(to right, #000000, #ff0000);
     -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
+    -webkit-background-clip: text; */
     /* color: rgb(255, 255, 255); */
     display: flex;
     align-items: center;
@@ -79,9 +113,172 @@ html{
 }
 .navbar-li a:hover{
     /* color: teal; */
-    background: linear-gradient(to right, #f9d423, #ff4e50);
+    background: linear-gradient(to right, #ffd86a, #ff9a00);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     transition-duration: 0.4s;
     transition-property: all;
 }
+.logo{
+    width: 5vw;
+    height: 3vw;
+    border-radius: 2vw;
+}
+.logo img{
+    width: 3vw;
+    height: 3vw;
+    border-radius: 2vw;
+}
+/* .colorbtn{
+    width: 4vw;
+    height: 2vw;
+    background: linear-gradient(to right
+    , #dd528d, #ff8c79, #fbae52);
+    border-radius: 2vw;
+    border: 2px solid lightslategrey;
+  
+    
+}
+.colorbtntrigger{
+    width: 2vw;
+    background: white;
+    border-radius: 4vw;
+    height: 2vw;
+    transform: translateX(2vw);
+    
+} */
+@media screen and (min-width:480px) {
+    @media screen and (max-width:700px) {
+    html{
+        font-size: 19.5%;
+    }
+    .navbar-ul{
+        height: 5vw;
+    }
+    .navbar-li a{
+        font-size: 2.2vw;
+    }
+    .logo{
+        width: 5vw;
+        height: 5vw;
+    }
+    .logo img{
+        width: 5vw;
+        height: 5vw;
+        border-radius: 2vw;
+    }
+    #logout{
+        font-size: 3.5vw;
+    }
+   
+    
+
+    }}
+
+@media screen and (min-width:700px) {
+    @media screen and (max-width:1200px) {
+        html{
+            font-size: 21%;
+
+        }
+        .location-more-btn{
+            margin: 0% 47%;
+        }
+     
+        .navbar-ul{
+            height: 5vw;
+        }
+        .navbar-li a{
+            font-size: 2.2vw;
+        }
+        .logo{
+            width: 5vw;
+            height: 5vw;
+        }
+        .logo img{
+            width: 5vw;
+            height: 5vw;
+            border-radius: 2vw;
+        }
+        #logout{
+            font-size: 3.5vw;
+        }
+       
+        
+    }
+}
+
+@media screen and (min-width:300px) {
+    @media screen and (max-width:480px) {
+        html{
+            font-size: 19.5%;
+            /* overflow-x: hidden; */
+        }
+        .navbar-btn{
+            width: 20vw;
+            height: 10vw;
+            z-index: 4;
+            /* box-shadow: 0vw 1vw 2vw inset; */
+            font-size: 4vw;
+            margin: 1vw;
+            z-index: 10;
+            position: absolute;
+            /* border-radius: 5vw; */
+            border: none;
+            display: initial;
+            font-family: cursive;
+            font-weight: 700;
+            box-shadow: 0vw 1vw 2vw ;
+            transition-duration: 0.5s;
+            animation: navbar-btn-border 10s infinite ease;
+        }
+        @keyframes navbar-btn-border {
+            0%{
+                border-radius: 5vw 4vw 2vw 3vw;
+            }
+            25%{
+                border-radius: 3vw 5vw 4vw 2vw
+            }
+            50%{
+                border-radius: 2vw 3vw 5vw 4vw
+            }
+            75%{
+                border-radius: 4vw 2vw 3vw 5vw
+            }
+            100%{
+                border-radius: 5vw 4vw 2vw 3vw
+            }
+        }
+        .navbar-ul{
+            flex-direction: column;
+            align-items: flex-start;
+            border-radius: 5vw 5vw 100vw 5vw;
+            height: 0vh;
+            width: 0vw;
+            transition-duration: 0.5s;
+            z-index: 10;
+        }
+        .navbar-li a{
+            transition-duration: 0.5s;
+            font-size: 0;
+        }
+        .logo{display: none;}
+        .logo img{    
+            width: 15vw;
+            height: 15vw;
+            border-radius: 2vw;
+        }
+        #logoname{
+            font-size: 0;
+        }
+        .colorbtn{
+            width: 9vw;
+            height: 5vw;
+            margin: 2vw;
+        }
+        .colorbtntrigger{
+            width: 7vw;
+            height: 5vw;
+        }
+    }
+} 

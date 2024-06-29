@@ -6,6 +6,8 @@
     max-width: 80%;
     margin: auto;
   margin-bottom: 2rem;
+  color: #232F3E;
+  animation: blogs 1.5s 1 ease;
 }
 .sugarpineblog{
     font-family: "Exo 2", sans-serif;
@@ -14,15 +16,33 @@
     font-size: 3.5rem;
     font-style: normal;
 }
-.travelblogcover{
-    width: 90%;
-    height: 50vh;
-    margin: 0rem 5%;
-    position: relative;
-    top: 10rem;
-    border-radius: 3rem;
-    box-shadow: 0rem 0rem 2rem;
+.blogcover{
+    width: 90vw;
+    height: fit-content;
+    margin: 5vw auto;
+    display: flex;
+    animation: blogs 1.5s 1 ease;
 }
+@keyframes blogs {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+.blogvideo{
+    width: 95vw;
+    height: 65vh;
+    border-radius: 2vw;
+    max-width: 5vw 2.5vw;
+}
+.blogsuggest{
+    font-size: 4vw;
+    width: 25vw;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    padding: 3vw;
+    color: #232F3E;
+        /* animation: heading-color 8s infinite reverse ease; */
+}
+
 .blogtitle{
     font-size: 4rem;
     font-family: monospace;
@@ -36,9 +56,35 @@
     font-weight: 800;
     font-size: 6rem;
     font-style: normal;
-    background: linear-gradient(to right, #870033, #ff6b08, #730073, #e9d200);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
+    color: #232F3E;
+    /* background: linear-gradient(to right, #870033, #ff6b08, #730073, #e9d200); */
+    /* -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; */
+    /* animation: heading-color 8s infinite reverse ease; */
+
+}
+.outro{
+    width: 80%;
+    top: 10rem;
+    color: #232F3E;
+    animation: blogs 1.5s 1 ease;
+}
+@keyframes heading-color {
+    0%{
+        background: linear-gradient(to right,black, rgb(144, 7, 7));
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+    50%{
+        background:  linear-gradient(to left,black, rgb(144, 7, 7));
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+    100%{
+        background: linear-gradient(to right,black, rgb(144, 7, 7));
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
 }
 .blogmatter p{
     height: auto;
@@ -51,10 +97,139 @@
 }
 .blogimage{
     height: 35vh;
-    width: 50%;
+    width: 50vw;
     border-radius: 3rem;
     margin: auto;
 }
 .blogimage img{
     border-radius: 3rem;
+}
+.outro{
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 1.6vw;
+}
+
+@media screen and (min-width:700px) {
+    @media screen and (max-width:1200px) {
+        .travelblogcover{
+            height: 40vh;
+            margin-top: 2vw;
+        }
+        .blogimage{
+            width: 70vw;
+        }
+        .blogtitle h3{
+            font-size: 2.5vw;
+        }
+        .blogmatter p{
+            font-size: 1.5vw;
+        }
+        .blogcover{
+            width: 90vw;
+            height: fit-content;
+            margin: 10vw auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .blogvideo{
+            width: 90vw;
+            height: 38vh;
+        }
+        .blogsuggest{
+            font-size: 10vw;
+            width: 90vw;
+        }
+        .outro{
+            font-size: 3vw;
+        }
+        
+    }
+}
+
+@media screen and (min-width:480px) {
+    @media screen and (max-width:700px) {
+        html{
+            font-size: 19.5%;
+        }
+        .travelblogcover{
+            height: 40vh;
+            margin-top: 2vw;
+        }
+        .blogimage{
+            width: 70vw;
+        }
+        .blogtitle h3{
+            font-size: 2.5vw;
+        }
+        .blogmatter p{
+            font-size: 1.5vw;
+        }
+        .blogcover{
+            width: 90vw;
+            height: fit-content;
+            margin: 10vw auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .blogvideo{
+            width: 90vw;
+            height: 38vh;
+        }
+        .blogsuggest{
+            font-size: 10vw;
+            width: 90vw;
+        }
+        .outro{
+            font-size: 3vw;
+        }
+    }}
+
+
+@media screen and (min-width:300px) {
+    @media screen and (max-width:480px) {
+        .travelblogcover{
+            width: 96%;
+            height: 65vw;
+            margin: 0rem 2%;
+            top: 15vw;
+            display: none;
+        }
+        .outro{
+            font-size: 3.5vw;
+            top: 20vw;
+            width: 90%;
+        }
+        .blogdiv{
+            top: 20vw;
+            max-width: 90%;
+        }
+        .blogtitle h3{
+            font-size: 6vw;
+        }
+        .blogimage{
+            width: 90vw;
+            height: 60vw;
+        }
+        .blogmatter p {
+            font-size: 3.5vw;
+        }
+        .blogcover{
+            height: 40vh;
+    margin: 15vw auto;
+    display: flex;
+    flex-direction: column;
+        }
+        .blogvideo{
+            width: 90vw;
+            height: 25vh;
+            /* margin: 5vw 2.5vw; */
+            border-radius: 2vw;
+        }
+        .blogsuggest{
+            font-size: 10vw;
+            width: 90vw;
+        }
+    }
 }

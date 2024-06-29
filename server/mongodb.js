@@ -58,6 +58,22 @@ const blogSchema = new Schema({
 })
 
 const blogs = model('blogs',blogSchema)
- export default {locations, logins, blogs}
+
+const tripSchema = new Schema({
+    username:{type:String, required:true},
+    Email:{type:String, required:true},
+    Phone:{type:String, required:true},
+    Destination:{type:String, required: true},
+    Days:{type:String, required:true},
+    Guide:{type:String},
+    Vehicle:{ type:String},
+    Hotel:{type: String},
+    Checkin:{type:String},
+    Checkout:{type:String},
+    Total:{type:String, required:true}
+
+}) 
+const trip = model('trips',tripSchema)
+ export default {locations, logins, blogs,trip}
  
 // module.exports = locations

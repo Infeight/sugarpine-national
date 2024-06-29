@@ -7,7 +7,7 @@ const Footer = () => {
   return (
 
     <>
-    <div className='foot'>
+    <div className='foot' >
         <div className="brandname">Sugarpine National</div>
 
         <div className="followus">Follow us on:

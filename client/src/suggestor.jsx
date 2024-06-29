@@ -40,7 +40,7 @@ const Suggestor = () => {
     
     <>
  
-     <div className="suggestion-desc">
+     <div className="suggestion-desc" id='suggestion-desc'>
         <input type="text" name='name' value={name.name} id='suggestor' placeholder='Your name' onChange={handleChange}  />
         <input type="text" name='place' value={name.place} id='suggested-place' placeholder='Place' onChange={handleChange} />
         <textarea name="description" value={name.description}  id="write-suggestion" placeholder='Describe your experience visisting that place!!' onChange={handleChange}></textarea>

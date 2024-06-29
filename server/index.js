@@ -8,6 +8,7 @@ import fs from 'fs'
 import locations from './mongodb.js'
 import logins from './mongodb.js'
 import blogs from './mongodb.js'
+import trip from './mongodb.js'
 import { get } from 'http'
 
 // // const json = require('../../latest/suggestion.json');
@@ -175,6 +176,25 @@ let logindata1;
   //     console.log("loggedout")
   //   }
   // })
+
+  })
+
+  app.post('/tripdetails', async(req,res)=>{
+   const tripdata = {
+    username:req.body.username,
+    Email:req.body.Email,
+    Phone:req.body.Phone,
+      Destination: req.body.Location,
+      Days: req.body.Days,
+      Guide: req.body.Guide,
+      Vehicle: req.body.Vehicle,
+      Hotel: req.body.Hotel,
+      Checkin:req.body.Checkin,
+      Checkout: req.body.Checkout,
+      Total: req.body.Total_price
+    }
+
+    await trip.trip.insertMany(tripdata)
 
   })
  

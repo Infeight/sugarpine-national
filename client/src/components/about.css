@@ -1,0 +1,123 @@
+.about{
+    max-width: 80%;
+    top: 5vw;
+    font-size: 1.6vw;
+    animation: about 1.5s 1 ease;
+}
+
+@keyframes about {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+.about h3{
+    font-size: 2.5vw;
+    /* animation: heading-color 8s infinite reverse ease; */
+    color: #232F3E;
+}
+.about h2{
+    font-size: 2vw;
+    /* animation: heading-color 8s infinite reverse ease; */
+    color: #232F3E;
+}
+.aboutimages{
+    display: flex;
+    width: 80vw;
+    height: auto;
+    flex-wrap: wrap;
+    margin: auto;
+}
+.aboutimages img{
+    width: 50%;
+    height: 50%;
+}
+@keyframes heading-color {
+    0%{
+        background: linear-gradient(to right,black, rgb(144, 7, 7));
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+    50%{
+        background:  linear-gradient(to left,black, rgb(144, 7, 7));
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+    100%{
+        background: linear-gradient(to right,black, rgb(144, 7, 7));
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+}
+@media screen and (min-width:700px) {
+    @media screen and (max-width:1200px) {
+       .about{
+        font-size: 2.5vw;
+        color: #232F3E;
+       } 
+       .about h3{
+   font-size: 4.5vw;
+       }
+       .about h2{
+        font-size: 4vw;
+
+       }
+       .aboutimages{
+        flex-direction: column;
+        width: 80vw;
+    }
+    .aboutimages img{
+        width: 100%;
+    }
+       
+    } 
+}
+
+@media screen and (min-width:480px) {
+    @media screen and (max-width:700px) {
+        html{
+            font-size: 19.5%;
+        }
+       .about{
+        font-size: 2.5vw;
+        color: #232F3E;
+       } 
+       .about h3{
+   font-size: 4.5vw;
+       }
+       .about h2{
+        font-size: 4vw;
+
+       }
+       .aboutimages{
+        flex-direction: column;
+        width: 80vw;
+    }
+    .aboutimages img{
+        width: 100%;
+    }
+       
+    } 
+}
+
+@media screen and (min-width:300px) {
+    @media screen and (max-width:480px) {
+        .about{
+     max-width: 90%;
+     top: 15vw;
+     font-size: 4vw;
+        }
+        .about h3{
+            font-size: 8vw;
+        }
+        .about h2{
+            font-size: 6vw;
+        }
+        .aboutimages{
+            flex-direction: column;
+            width: 90vw;
+        }
+        .aboutimages img{
+            width: 100%;
+        }
+    }
+}

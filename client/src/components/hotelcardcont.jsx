@@ -1,6 +1,5 @@
 import React from 'react'
-import { useState ,useEffect } from 'react'
-import locationinfo from '../../api'
+
 
 const Hotelcardcont = ({image, title,location,propertyType,rating,key,func,price}) => {
 

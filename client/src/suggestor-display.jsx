@@ -27,7 +27,7 @@ const getsuggestions = async()=>{
       <div className='display' key={data1._id}>
         <h3 className='suggestion-head'>{data1.place}</h3>
         <p className='suggestion'>{data1.placedesc}</p>
-        <div className='suggestor'>{`-${data1.username}`}</div>
+        <div className='suggestor'>{`-${data1.username.slice(0,16)}`}</div>
       </div>
     )
   })

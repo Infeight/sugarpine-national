@@ -3,7 +3,7 @@ import Navbar from '../navbar'
 import { useState, useEffect } from 'react'
 import './blog.css'
 import Footer from '../footer/footer'
-// import data1 from '../../../server/blogs.json'
+
 const Blog = () => {
   const [blogdata,setBlogdata] = useState([]);
 
@@ -18,17 +18,19 @@ const Blog = () => {
     blogs();
   })
 
+
+
   return (
-
-
-
     <>
       <Navbar/>
-      <img src="Travelblogcover.png" className='travelblogcover' alt=""
-      
-      
-      />
-      
+    
+      <div className='blogcover'>
+      <video className='blogvideo'  autoPlay loop muted>
+        <source src="covervid.mp4" type='video/mp4'   />
+      </video>
+      <div className='blogsuggest'>LIVE WITH NO EXCUSES. <br /> <br /> TRAVEL WITH NO REGRETS.</div>
+      </div>
+     
    {blogdata&&blogdata.map((data)=>{
     console.log(data)
     return(
@@ -41,7 +43,7 @@ const Blog = () => {
     )
    })}
 
- <div className="outro" style={{width:"80%", margin:"auto", fontFamily:"math", fontSize:"3.5rem", wordWrap:"break-word", top:"10rem", position:"relative", marginTop:"10rem"}} >
+ <div className="outro" style={{ margin:"auto", wordWrap:"break-word", position:"relative", marginTop:"10rem"}} >
  Stay tuned to the SugarPine National Blog for more travel insights, tips, and stories. Ready to start your adventure? Download the SugarPine National app today and embark on a journey of a lifetime!
  </div>
 

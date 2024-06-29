@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
 .main-card{
     position: relative;
     top: 15rem;
@@ -11,30 +12,64 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+   
+    /* box-shadow: 0vw 0vw 1vw inset; */
+
+
 }
+@keyframes img {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+.slidernav{
+    display: none;
+}
+.main-card::-webkit-scrollbar{
+    display: none;
+}
+
 .img{
-   width: 24%;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+   width: 21.4vw;
+    height: 94%;
     position: relative;
+    /* left: 100%; */
     /* left: 75%; */
-   border-radius: 2rem;
-   box-shadow: 0rem 0rem 1rem;
-    align-items: center;
-    justify-content: center;
+    margin-left: 1vw;
+   
+   /* border-radius: 2rem; */
+   box-shadow: 0rem 0rem 1rem #232F3E;
+     align-items: center; 
+     justify-content: center; 
+     scroll-snap-align: end; 
+     overflow-y: hidden; 
+     animation: img 1s 1 ease;
+    /* animation: autorun 9s infinite linear ;
+    animation-delay: (1s * (var(--position)-1)); */
 }
+
 .img:hover{
-    h3{
-        top: -75rem;
-    }
+   
     p{
-       visibility: visible;
-       transition-duration: 1s;
+        /* top: 2rem; */
+        
+       /* visibility: visible; */
+       opacity: 1;
+       transition-duration: 0.5s;
+    
     }
 }
 .img img{
-    width: 100%;
-    height: 100%;
+    width: 95%;
+    height: 89%;
     border-radius: 2rem;
+    margin-top: 0.5vw;
+    /* margin-left: 0.5vw; */
 }
 .placedesc{
     width: 70%;
@@ -47,38 +82,356 @@
     font-family: monospace;
     padding: 1.5rem;
 }
+.explorebtncont{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 3vw;
+}
 .placename{
     position: relative;
-    top: -30rem;
+    top: 0vw;
+    height: 2vw;
+    /* overflow: hidden; */
     text-align: center;
-    font-size: 6rem;
-    color: aliceblue;
-    font-family: cursive;
+    font-size: 1.5vw;
+    color: #232F3E;
+    margin: 0;
+    /* background: linear-gradient(to right, black,rgb(153, 46, 46));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     letter-spacing: 0.5rem;
     max-width: 100%;
     transition-duration: 0.5s;
 }
 
 .place-head{
-    top: -80rem;
+    padding: 0.1vw;
+    top: 0.5vw;
     font-family: monospace;
-    position: relative;
+    position: absolute;
     font-size: 3rem;
     text-align: center;
     left: 5%;
     max-width: 90%;
-    visibility: hidden;
+    opacity: 0;
     backdrop-filter:blur(1rem);
     /* transition-duration: 0.5s; */
     color: aliceblue;
+    border-radius: 1vw;
+    background-color: #00000085;
+    /* transition-duration: 1s; */
     
 }
 .location-more-btn{
     position: relative;
     top: 15rem;
-    margin: 0rem 49%;
+    margin: 0rem 114.5rem;
     background-color: green;
     color: aliceblue;
     font-family: monospace;
 
 }
+.maincardscroll{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 190vw;
+    align-items: center;
+    
+    /* min-width: calc((22vw) * 9); */
+}
+.explorebtn{
+    position: relative;
+font-size: 1vw;
+height: 2.5vw;
+/* margin: auto; */
+/* left: 80%; */
+background-color: #ffd86a;
+border: none;
+border-radius: 3vw;
+/* box-shadow: 0vw 1vw 2vw; */
+list-style: none;
+padding: 0.5vw;
+box-sizing: border-box;
+animation: explore-btn-border 10s infinite ease;
+
+}
+.explorebtn a{
+    text-decoration: none;
+    color: #232F3E;
+    font-family: cursive;
+}
+@keyframes explore-btn-border {
+    0%{
+        border-radius: 5vw 4vw 2vw 3vw;
+    }
+    25%{
+        border-radius: 3vw 5vw 4vw 2vw
+    }
+    50%{
+        border-radius: 2vw 3vw 5vw 4vw
+    }
+    75%{
+        border-radius: 4vw 2vw 3vw 5vw
+    }
+    100%{
+        border-radius: 5vw 4vw 2vw 3vw
+    }
+}
+
+@media screen and (min-width:700px) {
+    @media screen and (max-width:1200px) {
+        html{
+            font-size: 21%;
+            
+        }
+        .maincardscroll{
+            width: 360vw;
+        }
+        
+        .main-card{
+            height: 100rem;
+        }
+        .placename{
+            font-size: 3vw;
+            height: 3.5vw;
+            /* background-color: #0000004d; */
+            
+        }
+        .img{
+            width: 70vw;
+            margin-right: 1vw;
+        }
+        .img img{
+            height: 85%;
+            margin-top: -1.5vw;
+        }
+        .img:hover{
+            h3{
+                /* top: -92rem; */
+            }
+            p{
+                opacity: 1;
+            }
+        }
+        .place-head{
+            /* top: -95rem; */
+            height: 79rem;
+            overflow-y: scroll;
+            font-size: 2.5vw;
+            left: 0%;
+            margin: 0 2%;
+            max-width: 100%;
+            background-color: #0000007d;
+            backdrop-filter: none;
+        }
+        .place-head::-webkit-scrollbar{
+            display: none;
+        }
+        .slidernav{
+            display: none;
+        }
+        .explorebtncont{
+            margin-top: 1vw;
+        }
+        .explorebtn{
+            position: relative;
+            height: 4vw;
+font-size: 2vw;
+/* margin: auto; */
+/* left: 80%; */
+background-color: #ffd86a;
+color: #232F3E;
+border: none;
+border-radius: 3vw;
+/* box-shadow: 0vw 1vw 2vw; */
+list-style: none;
+padding: 0.8vw;
+box-sizing: border-box;
+
+        }
+        .explorebtn a{
+            text-decoration: none;
+            color:#232F3E ;
+            font-family: cursive;
+        }
+    }}
+
+
+    @media screen and (min-width:480px) {
+        @media screen and (max-width:700px) {
+            html{
+                font-size: 19.5%;
+                
+            }
+            .maincardscroll{
+                width: 360vw;
+            }
+            
+            .main-card{
+                height: 100rem;
+            }
+            .placename{
+                font-size: 3vw;
+                height: 3.5vw;
+                /* background-color: #0000004d; */
+                
+            }
+            .img{
+                width: 70vw;
+                margin-right: 1vw;
+            }
+            .img img{
+                height: 85%;
+                margin-top: -1.5vw;
+            }
+            .img:hover{
+                h3{
+                    /* top: -92rem; */
+                }
+                p{
+                    opacity: 1;
+                }
+            }
+            .place-head{
+                /* top: -95rem; */
+                top: 2vw;
+                height: 79rem;
+                overflow-y: scroll;
+                font-size: 2.5vw;
+                left: 0%;
+                margin: 0 2%;
+                max-width: 100%;
+                background-color: #0000007d;
+                backdrop-filter: none;
+            }
+            .place-head::-webkit-scrollbar{
+                display: none;
+            }
+            .slidernav{
+                display: none;
+            }
+            .explorebtncont{
+                margin-top: 1vw;
+            }
+            .explorebtn{
+                position: relative;
+                height: 4vw;
+    font-size: 2vw;
+    /* margin: auto; */
+    /* left: 80%; */
+    background-color: #ffd86a;
+    color: #232F3E;
+    border: none;
+    border-radius: 3vw;
+    /* box-shadow: 0vw 1vw 2vw; */
+    list-style: none;
+    padding: 0.8vw;
+    box-sizing: border-box;
+    
+            }
+            .explorebtn a{
+                text-decoration: none;
+                color:#232F3E ;
+                font-family: cursive;
+            } 
+        }}
+
+
+    @media screen and (min-width:300px) {
+        html{
+            /* overflow-x: hidden; */
+        }
+        @media screen and (max-width:480px) {
+            .main-card{
+                width: 80%;
+                overflow-x: scroll;
+                scroll-behavior: smooth;
+                scroll-snap-type:x mandatory;
+                max-width: none;
+                margin: 2% 10%;
+                box-shadow: 1vw 1vw 4vw;
+            }
+            .main-card::-webkit-scrollbar{
+                display: none;
+            }
+        
+            .maincardscroll{
+                width: 650vw;
+            }
+            .img{
+                /* margin-left: 2vw; */
+                height: 100%;
+                width: 90vw;
+                scroll-snap-align: start;
+            }
+            .img img{
+                height: 85%;
+                margin-top: -3.5vw;
+            }
+         
+            .place-head{
+                font-size: 3.5vw;
+                top: 3vw;
+                margin: 0vw 5%; 
+                left: 0%;
+                height: 80%;
+                /* display: none; */
+                
+            }
+            .placename{
+                font-family: fantasy;
+                font-size: 5vw;
+                letter-spacing: 2vw;
+                height: 2vw;
+               /* color: linear-gradient(to right, linear-gradient(to right, #fccd18, #eb7195, #8c1bab)); */
+             
+            }
+            .slidernav{
+                display: flex;
+                /* background-color: rgb(177, 170, 170); */
+                border-radius: 3vw;
+                height: 2vw;
+                /* top: 12vw; */
+            }
+            .slidernav a{
+                width: 5vw;
+                height: 1vw;
+                opacity: 75%;
+                border-radius: 1vw;
+                background-color: rgb(154, 153, 153);
+                transition: opacity ease 250ms;
+            }
+            .slidernav a:hover{
+                background-color: rgb(35, 34, 34);
+            }
+            .explorebtn{
+                position: relative;
+                height: 7vw;
+                margin-top: 4.5vw;
+    font-size: 4.5vw;
+    /* margin: auto; */
+    /* left: 80%; */
+    background-color: #ffd86a;
+    border: none;
+    border-radius: 3vw;
+    /* box-shadow: 0vw 1vw 2vw; */
+    list-style: none;
+    padding: 1vw;
+    box-sizing: border-box;
+
+            }
+            .explorebtn a{
+                text-decoration: none;
+                font-size: 4vw;
+                color: #232F3E;
+                font-family: cursive;
+
+            }
+         
+        }
+    }

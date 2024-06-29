@@ -5,10 +5,17 @@
     max-width: 90%;
     word-wrap: break-word;
     /* width: 80%; */
-    height: 75rem;
-    border: 1px solid;
+    height: 90rem;
+    /* border: 1px solid; */
     margin: 0% 5%;
-    box-shadow: 0rem 0rem 4rem;
+    box-shadow: 0rem 0rem 3rem;
+    animation: aboutinfo 1s 1 ease;
+    /* background: #ffd86a; */
+  
+}
+@keyframes aboutinfo {
+    from{opacity: 0;}
+    to{opacity: 1;}
 }
 .our-work-head{
     margin-top: 1rem;
@@ -16,6 +23,18 @@
     font-size: 7rem;
     text-align: center;
     font-family: monospace;
+    color: #232F3E;
+    animation: ourworkheadanmiate 5s infinite ease;
+}
+@keyframes ourworkheadanmiate {
+    from{
+        transform: rotateY(40deg);
+        /* box-shadow: 1rem 1rem 1rem; */
+    }
+    to{
+        transform: rotateY(-40deg);
+        /* box-shadow: 5rem 1rem 3rem; */
+    }
 }
 .ourwork-img{
     display: flex;
@@ -23,10 +42,11 @@
     align-items: center;
     justify-content: baseline;
     width: 25%;
-    height: 80%;
+    height: 100%;
     position: relative;
     left: 2rem;
-    border: 3px solid;
+    border: 3px solid #232F3E;
+    background-color: white;
 }
 .ourwork-img img{
     width: 95%;
@@ -39,19 +59,43 @@
     font-size: 2rem;
     display: flex;
 }
+.insta-model li{
+    font-size: 3rem;
+    margin: 1rem;
+}
 .why-desc{
     position: relative;
-    top: -60rem;
-    left: 60rem;
+    color: #232F3E;
+    /* background: linear-gradient(to right,black, rgb(144, 7, 7)); */
+    /* -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; */
     width: 70%;
     height: 80%;
     font-size: 3rem;
     font-family: monospace;
+    transition-duration: 0.5s;
+    /* animation: why-desc-color 8s infinite reverse ease; */
 }
-
+@keyframes why-desc-color {
+    0%{
+        background: linear-gradient(to right,rgb(255, 187, 0), #ffd86a);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+    50%{
+        background:  linear-gradient(to left,black, #ffd86a);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+    100%{
+        background: linear-gradient(to right,black, #ffd86a);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+}
 .options{
     width: 100%;
-    height:75%;
+    height:100%;
     display: flex;
     list-style: none;
     align-items: center;
@@ -61,10 +105,13 @@
     margin-right: 1rem;
     width: 20%;
     height: 90%;
-    background-color: white;
-    border-radius: 2rem;
-    box-shadow: 0.5rem 0.5rem 1rem;
+    border: 2px solid #232F3E;
+    color: #232F3E;
+    background: transparent;
+    border-radius: 2rem  ;
+    
     overflow: hidden;
+
     
   
     transition-duration: 0.5s;
@@ -78,17 +125,27 @@
 .options li:hover{
     width: 50%;
 
-  
+  overflow-y: scroll;
+}
+.options li::-webkit-scrollbar{
+    display: none;
 }
 .suggestions{
     width: 100%;
     height: 70rem;
-    top: 20rem;
+    top: 30rem;
     position: relative;
-    /* background-color: #869b5b; */
-    background: linear-gradient(to right, #f9d423, #ff4e50);
-    box-shadow: 0rem 0rem 4rem;
+    background: #ffd86a;
+    /* background: linear-gradient(to right, #f9d423, #ff4e50); */
+    box-shadow: 0rem 0rem 3rem;
     border-radius: 5rem 5rem 0rem 0rem;
+    animation: suggestions 1s 1 ease;
+}
+@keyframes suggestions {
+    from{top:50rem}
+    to{
+        top: 30rem;
+    }
 }
 .suggestions h2{
     margin: 0%;
@@ -96,17 +153,32 @@
     font-size: 4rem;
     font-family: system-ui;
     letter-spacing: 0.5rem;
-    color: #ac1e1e;
+    color: #232F3E;
 }
 .suggestions-1{
     width: 95%;
     height: 90%;
-    background: linear-gradient(to right, #f9d423, #ff4e50);
+     /* background: #503a3a69; */
     margin: 0% 2.5%;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 2rem;
+    border-radius: 4rem;
+    /* animation: suggestion-back-color 10s infinite ease-in-out; */
+}
+@keyframes  suggestion-back-color {
+    0%{
+        background: linear-gradient(to right, #f47595, #b15a9a,#643ba2);
+       
+    }
+    50%{
+        background:  linear-gradient(to right, #fd475e, #c4659f, #7d8afa);
+        
+    }
+    100%{
+        background: linear-gradient(to right, #dd528d, #ff8c79, #fbae52);
+       
+    }
 }
 .suggestions-disp{
     background-color: transparent;
@@ -137,12 +209,13 @@
     width: 90%;
     height: 5rem;
     border-radius: 1rem;
-    border: none;
+    border: 2px solid #232F3E;
     outline: none;
     font-size: 3rem;
     margin-bottom: 1rem;
     padding-left: 1rem;
     font-family: monospace;
+    color: #232F3E;
 }
 .suggestion-desc textarea{
     min-width: 90%;
@@ -150,9 +223,13 @@
     max-width: 75%;
     overflow-x: hidden;
     overflow-y: scroll;
+    border-radius: 1rem;
+    border: 2px solid #232F3E;
+    outline: none;
     font-size: 3rem;
     font-family: monospace;
     padding-left: 1rem;
+    color: #232F3E;
 }
 .suggestion-desc textarea::-webkit-scrollbar{
     display: none;
@@ -161,8 +238,8 @@
 .display{
     margin-bottom: 1.5rem;
     background-color: aliceblue;
-    max-height: auto;
-    min-height: 15rem;
+    height: auto;
+    /* min-height: 15rem; */
     width: 95%;
     border-radius: 1rem;
     box-shadow: 0.5rem 0.5rem 4rem;
@@ -172,6 +249,7 @@
     margin: 0%;
     padding-left: 1.5rem;
     padding-top: 1rem;
+    color: #232F3E;
     
 }
 .suggestion{
@@ -179,6 +257,7 @@
     margin: 0% 2.5%;
     font-size: 2.5rem;
     font-family: monospace;
+    color: #232F3E;
 }
 .suggestor{
     width: auto;
@@ -188,25 +267,274 @@
     font-family: monospace;
     max-width: 20rem;
     overflow-x: hidden;
+    color: #232F3E;
 }
 #suggest{
     width: 90%;
     margin-top: 0.5rem;
     font-size: 3rem;
     border-radius: 1rem;
-    background: linear-gradient(to right, #f9d423, #ff4e50);
+    background: whitesmoke;
     font-family: monospace;
     outline: none;
     animation-duration: 0.4s;
     transition-property:all ;
+    transition-duration: 0.5s;
     /* animation-name: none; */
+    border: 2px solid #232F3E;
     animation-iteration-count: 1;
+}
+#suggest:hover{
+    background: linear-gradient(45deg
+    ,#ffd86a, transparent); 
+    transition-duration: 0.5s;
 }
 @keyframes clicked {
     0%{
-        background-color: #b3f5b3; 
-    }
+        background: whitesmoke;
+       }
+
     100%{
-        background-color: #5ae95a;;
+        background: linear-gradient(to right
+        , #dd528d, #ff8c79, #fbae52); 
+    }
+}
+.addsuggestion{
+    position: absolute;
+    /* top: 42vw; */
+    margin: 38% auto 0;
+    width: 20vw;
+    height: 7vw;
+    border-radius: 6vw;
+    border: none;
+    background-color: greenyellow;
+    display: none;
+}
+
+
+@media screen and (min-width:700px) {
+    @media screen and (max-width:1200px) {
+        html{
+            font-size: 21%;
+        }
+       
+        .about-info{
+            height: 150rem;
+        }
+        .ourwork-img{
+            height: 100%;
+            display: none;
+        }
+        .our-work-head{
+            font-size: 10rem;
+        }
+        .why-desc{
+            /* top: -75%; */
+            font-size: 1.9vw;
+            width: 90%;
+            /* overflow-y: scroll; */
+        }
+        .insta-model li{
+            font-size: 2vw;
+            margin: 2rem;
+        }
+        .options{
+            height: 90%;
+     
+        }
+        .options li{
+            border: 1px solid #232F3E;
+        }
+        
+        .suggestions{
+            height: 80rem;
+           
+        }
+        .suggestion-desc input{
+            height: 10rem;
+            font-size: 2.2vw;
+            border-radius: 2rem
+        }
+        .suggestion-desc textarea{
+            min-height: 50%;
+            font-size: 2.2vw;
+            border-radius: 2rem;
+        }
+        #suggest{
+            font-size: 5rem;
+    border-radius: 2rem;
+        }
+        .display{
+            min-height: 20rem;
+            margin-top: 1rem;
+
+        }
+        .suggestion-head{
+            font-size: 2.2vw;
+
+        }
+        .suggestion{
+            font-size: 1.9vw;
+        }
+        .suggestor{
+            font-size: 1.9vw;
+            max-width: 55rem;
+            top: -3rem;
+        }
+        .suggestions h2{
+            font-size: 2.2vw;
+        }
+    }
+} 
+@media screen and (min-width:480px) {
+    @media screen and (max-width:700px) {
+        html{
+            font-size: 19.5%;
+        }
+       
+        .about-info{
+            height: 150rem;
+        }
+        .ourwork-img{
+            height: 100%;
+            display: none;
+        }
+        .our-work-head{
+            font-size: 10rem;
+        }
+        .why-desc{
+            /* top: -75%; */
+            font-size: 2.9vw;
+            width: 90%;
+            /* overflow-y: scroll; */
+        }
+        .insta-model li{
+            font-size: 2vw;
+            margin: 2rem;
+        }
+        .options{
+            height: 90%;
+     
+        }
+        .options li{
+            border: 1px solid #232F3E;
+        }
+        
+        .suggestions{
+            height: 80rem;
+           
+        }
+        .suggestion-desc input{
+            height: 10rem;
+            font-size: 2.2vw;
+            border-radius: 2rem
+        }
+        .suggestion-desc textarea{
+            min-height: 50%;
+            font-size: 2.2vw;
+            border-radius: 2rem;
+        }
+        #suggest{
+            font-size: 5rem;
+    border-radius: 2rem;
+        }
+        .display{
+            min-height: 20rem;
+            margin-top: 1rem;
+
+        }
+        .suggestion-head{
+            font-size: 2.2vw;
+
+        }
+        .suggestion{
+            font-size: 1.9vw;
+        }
+        .suggestor{
+            font-size: 1.9vw;
+            max-width: 55rem;
+            top: -3rem;
+        }
+        .suggestions h2{
+            font-size: 2.2vw;
+        }
+    }}
+
+@media screen and (min-width:300px) {
+    @media screen and (max-width:480px) {
+        .addsuggestion{
+            display: initial;
+            background-color: #00000085;
+            font-size: 4vw;
+            padding: 0;
+            color: whitesmoke;
+
+        }
+        .suggestions h2{
+            font-size: 4vw;
+        }
+        .suggestions-disp{
+            width: 100%;
+            transition-duration: 0.2s;
+        }
+        .suggestion-desc{
+            width: 60%;
+            display: none;
+        }
+        .suggestion-desc textarea{
+            min-height: 50%;
+            font-size: 3.5vw;
+        }
+        .suggestion-desc input{
+            font-size: 3.5vw;
+            height: 6vw;
+
+        }
+        .suggestion-desc #suggest{
+            font-size: 3.5vw;
+        }
+        .display{
+            /* min-height: 15vw; */
+            /* overflow-x: hidden; */
+        }
+        .suggestions-1{
+            justify-content: left;
+        }
+        .suggestion-head{
+            font-size: 3.5vw;
+        }
+        .suggestion{
+            font-size: 3.5vw;
+        }
+        .suggestor{
+            font-size: 3vw;
+            left: 60%;
+            max-width: 35%;
+            overflow: hidden;
+            
+        }
+        .about-info{
+            height: 120vw;
+        }
+        .ourwork-img{
+            display: none;
+
+        }
+        .why-desc{
+            height: 70%;
+            width: 95%;
+            font-size: 3.5vw;
+        }
+        .options{
+            height: 100%;
+        }
+        .options li{
+            height: 100%;
+            overflow: scroll;
+            border:0.5px solid #232F3E;
+        }
+        .options li:hover{
+            width: 80%;
+        }
     }
 }
