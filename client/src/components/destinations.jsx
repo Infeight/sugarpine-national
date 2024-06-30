@@ -182,11 +182,12 @@ const Destinations = () => {
   }
 
   const handledetails = () => {
-    console.log(72.877426, 19.07609)
+    // console.log(72.877426, 19.07609)
     tourattr(centre.lng, centre.lat).then(features => {
+      // console.log(features)
       features.map(tourdata => {
         if (features.indexOf(tourdata) < 20) {
-
+        
           tourxid(tourdata.properties.xid).then(placedats => {
             console.log(placedats)
             xid.push(placedats)
@@ -218,7 +219,7 @@ const Destinations = () => {
       const wikidata = await result?.json()
 
       if (result?.locname?.search[0]?.title) {
-        console.log(result)
+        // console.log(result)
       }
       else {
         console.log(wikidata?.query?.search)
@@ -299,23 +300,23 @@ const Destinations = () => {
 
   const moreweather = () => {
     if (document.getElementById("moreinfo").value == "off") {
-      document.getElementById("forecast").style.display = "block"
+      document.getElementById("forecast").style.display = "flex"
       document.getElementById("weather-initial").style.display = "flex"
       document.getElementById("weather-initial").style.alignItems = "center"
-      document.getElementById("moreinfo").innerText = "Less Information"
+      document.getElementById("moreinfo").innerText = "Less"
       document.getElementById("moreinfo").value = "on"
     }
     else if (document.getElementById("moreinfo").value == "on") {
       document.getElementById("forecast").style.display = "none"
       document.getElementById("weather-initial").style.display = "block"
-      document.getElementById("moreinfo").innerText = "More Information"
+      document.getElementById("moreinfo").innerText = "More"
       document.getElementById("moreinfo").value = "off"
     }
 
   }
 
   const sendEmail = (e) => {
-    console.log(totaltrip)
+    // console.log(totaltrip)
     emailjs.sendForm('service_zu6kd9m', 'template_71rje2i', form.current, {
       publicKey: '0jDVFv-PznKuOziiu',
     })
@@ -357,7 +358,7 @@ const Destinations = () => {
 
       const res = await fetch(`${url}`)
       const data = await res?.json();
-      console.log(data)
+      // console.log(data)
       setWikipage(data)
       setWikipagepresent(true);
       setShowdestimage(false)
@@ -369,7 +370,7 @@ const Destinations = () => {
 
   useEffect(() => {
     if (localStorage.getItem("exploredloc") !== null) {
-      console.log(localStorage.getItem("exploredloc"))
+      // console.log(localStorage.getItem("exploredloc"))
       setLocname(`${localStorage.getItem("exploredloc")}`)
       localStorage.removeItem("exploredloc")
     }
@@ -380,6 +381,12 @@ const Destinations = () => {
     setTransport({ ...transport, transportname: e.target.closest(".guides").querySelector(".exp").innerText, transportprice: e.target.closest(".guides").querySelector(".guidename").innerText })
   }
 
+  const closecheckout = ()=>{
+    setCheckoutsuccess(false)
+  }
+  const closetripcheck = ()=>{
+    document.getElementById('tripcheck-weather-cont').style.display = "none"
+  }
 
 
   return (
@@ -404,17 +411,18 @@ const Destinations = () => {
 
 
       <Navbar />
+   <div className='destination-cover'><img src="destinationscover.jpeg" alt="" /></div>
 
-
-      <div className='tripcheck-weather-cont' id='tripcheck-weather-cont' style={{ display: "none" }}>
-        <section className="weather-initial" id='weather-initial' style={{ transitionDuration: "0.5s", display: "none", margin: "1% 0", alignItems: "centre", backgroundColor: "#4c4c9e" }}>
+      <div className='tripcheck-weather-cont' id='tripcheck-weather-cont' style={{ display: "none" }} >
+        <button id='closetripcheck' onClick={closetripcheck}>Close</button>
+        <section className="weather-initial" id='weather-initial' style={{ transitionDuration: "0.5s", display: "none", margin: "1% 0", alignItems: "centre", backgroundColor: "#232F3E" }}>
           <div className='currentweather' id='currentweather' style={{ width: "100%" }}>
-            <div className="temp" style={{ width: "100%", color: "white", margin: "0rem 4rem", fontFamily: "math" }}>🌡 Temperature: {weather1.temp} C</div>
-            <div className="clouds" style={{ width: "100%", color: "white", margin: "0rem 4rem", fontFamily: "math" }}>⛅ Clouds: {weather1.clouds}</div>
-            <div className="wind" style={{ width: "100%", color: "white", margin: "0rem 4rem", fontFamily: "math" }} >🎐 Wind: {weather1.windspeed}m/s {weather1.winddir}</div>
-            <div className="humidity" style={{ width: "100%", color: "white", margin: "0rem 4rem", fontFamily: "math" }}>🥵 Humidity: {weather1.humidity}%</div>
-            <div className="astronomy" style={{ width: "100%", color: "white", margin: "0rem 4rem", fontFamily: "math" }}>🌇/🌆: {weather1.sunrise} / {weather1.sunset}</div>
-            <button id='moreinfo' onClick={moreweather} value={"off"} >More Information</button>
+            <div className="temp" style={{ width: "100%", margin: "0rem 4rem", fontFamily: "math" }}>🌡 Temperature: {weather1.temp} C</div>
+            <div className="clouds" style={{ width: "100%", margin: "0rem 4rem", fontFamily: "math" }}>⛅ Clouds: {weather1.clouds}</div>
+            <div className="wind" style={{ width: "100%", margin: "0rem 4rem", fontFamily: "math" }} >🎐 Wind: {weather1.windspeed}m/s {weather1.winddir}</div>
+            <div className="humidity" style={{ width: "100%", margin: "0rem 4rem", fontFamily: "math" }}>🥵 Humidity: {weather1.humidity}%</div>
+            <div className="astronomy" style={{ width: "100%", margin: "0rem 4rem", fontFamily: "math" }}>🌇/🌆: {weather1.sunrise} / {weather1.sunset}</div>
+            <button id='moreinfo' onClick={moreweather} value={"off"} >More</button>
           </div>
           <section className='forecast' id='forecast' style={{ width: "130%", fontFamily: "math", marginRight: "4rem", color: "white", position: "relative", left: "2rem" }}>
             <div style={{ borderBottom: "2px dashed white", textAlign: "left", height: "4vh", display: "flex", alignItems: "center", justifyContent: "center" }} className="forecast">Forecast (Today and Next 2days)</div>
@@ -439,9 +447,27 @@ const Destinations = () => {
             <div id='tripcheck'></div>
           </ul>
           <div className="loginconfirm" id='loginconfirm' style={{ display: "none" }}>😕 Did'nt you LOG IN? Please do.</div>
-        </section>
 
+          
+        </section>
+        {checkoutsuccess == true ?
+          <div className='checkedoutimg' id='checkedoutimg' style={{ position: "absolute" }}>
+            <img src="checkedout.avif" alt="" />
+            
+            <div>
+            <button id='checkoutclose' style={{cursor:"pointer"}} onClick={closecheckout}>Close</button>
+              <h2>Checked out Successfully!</h2>
+              <section>We recieved your trip details. Hang on, Our support team will call you to confirm your trip.</section>
+              <section>In the mean time You can pack your bags.</section>
+              <section>-SUGARPINE NATIONAL</section>
+           
+            </div>
+          </div> : <></>}
       </div>
+
+
+      
+
       {/* SEARCH BAR AND HEAD */}
       <div className='head-cont'>
         <div className="place-name">
@@ -472,16 +498,7 @@ const Destinations = () => {
 
         </div>
         {/* CHECKOUT SUCCESS */}
-        {checkoutsuccess == true ?
-          <div className='checkedoutimg' id='checkedoutimg' style={{ position: "absolute" }}>
-            <img src="checkedout.avif" alt="" />
-            <div>
-              <h2>Checked out Successfully!</h2>
-              <section>We recieved your trip details. Hang on, Our support team will call you to confirm your trip.</section>
-              <section>In the mean time You can pack your bags.</section>
-              <section>-SUGARPINE NATIONAL</section>
-            </div>
-          </div> : <></>}
+        
       </div>
 
       {/* SERVICES BAR */}
@@ -535,12 +552,12 @@ const Destinations = () => {
             <img style={{ width: "90%", margin: "1% 5%" }} id='touristload' src="toursindia.png" alt="" />
             <button id='details' onClick={() => { handledetails() }}>Click to search for tourist spots!</button>
             <p id='guides' style={{ color: "" }} >Click the button above to search for tourist spots nearby the searched location!</p>
-            {xid.length > 0 ?
+            {
               showtours == true ? xid.map(xidata => {
                 // console.log(xid)
                 return (<Tourspotcont key={`${xidata[1]}`} title={`${xidata[0]}` ? `${xidata[0]}` : "Tourist spot"} wikidata={`${xidata[2]}` ? `${xidata[2]}` : "Sorry,No Info found😔"} maps={`${xidata[1]}`} func1={selectTour} />)
               })
-                : <></> : <div className="notfound"> Sorry, There occured an error.😔 <br /> PLease Check for tourist locations with Jenn (Our AI assistant) or <a href="https://www.google.com/">Google</a></div>}
+                : <></> }
           </div>
         </div>
       </div>

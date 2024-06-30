@@ -13,7 +13,9 @@
 
 .brandname{
     font-size: 20rem;
-    font-family: fantasy;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
     position: relative;
     /* color: #b46d10; */
     top: 5rem;
@@ -50,13 +52,15 @@
     /* right: 5%; */
     top: 14rem;
     color: #232F3E;
-    font-family: monospace;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
     height: fit-content;
 }
 .followus{
     max-width: fit-content;
     font-size: 5rem;
-    font-family: monospace;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
     position: relative;
     left: 5rem;
     top: 12rem;

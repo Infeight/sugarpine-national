@@ -115,7 +115,8 @@ position: relative;
 
 .login-form input {
   text-align: center;
-  font-family: cursive;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 600;
   outline: none;
 
   width: 90%;
@@ -134,7 +135,9 @@ position: relative;
 
 .login-form #submit {
   width: 45%;
-  font-family: cursive;
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
   cursor: pointer;
   font-size: 3rem;
   margin-left: 30%;
@@ -442,7 +445,7 @@ position: relative;
     .login-form {
       top: -15rem;
       width: 95%;
-      height: 20%;
+      height: 22%;
       padding-top: 10vh;
       padding-bottom: 10vh;
       animation: login 1.5s 1 ease;
@@ -456,7 +459,7 @@ position: relative;
       margin: 0 5%;
       width: 90%;
       font-size: 4vw;
-      height: 8vw;
+      height: 9vw;
       margin-bottom: 3vw;
 
     }

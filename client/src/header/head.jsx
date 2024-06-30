@@ -98,7 +98,7 @@ const Head = () => {
         <Navbar />
         <div className="head-back">
           <div className="login-form" id='login-form'>
-            <div className="signin-cap">Welcome to Sugarpine National {loggeduser1}</div>
+            <div className="signin-cap">Welcome to Sugarpine National <span style={{color:"#ffd86a"}}>{loggeduser1}</span></div>
 
             <button id='logout' onClick={() => { logout() }} >Logout</button>
           </div>
@@ -121,7 +121,7 @@ const Head = () => {
         <Navbar />
         <div className="head-back">
           <div className="login-form" id='login-form'>
-            <div className="signin-cap">Welcome to Sugarpine National {loggeduser1}</div>
+            <div className="signin-cap">Welcome to Sugarpine National <span style={{color:"#ffd86a"}}>{loggeduser1}</span></div>
 
             <button id='logout' onClick={() => { logout() }} >Logout</button>
           </div>

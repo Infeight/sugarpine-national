@@ -226,7 +226,8 @@ body{
             /* border-radius: 5vw; */
             border: none;
             display: initial;
-            font-family: cursive;
+            font-family: "Exo 2", sans-serif;
+            font-optical-sizing: auto;
             font-weight: 700;
             box-shadow: 0vw 1vw 2vw ;
             transition-duration: 0.5s;

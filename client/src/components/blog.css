@@ -93,7 +93,8 @@
     box-sizing: border-box;
     padding: 0rem 2rem;
     word-wrap: break-word;
-    font-family: monospace;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
 }
 .blogimage{
     height: 35vh;

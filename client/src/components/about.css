@@ -3,6 +3,8 @@
     top: 5vw;
     font-size: 1.6vw;
     animation: about 1.5s 1 ease;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
 }
 
 @keyframes about {

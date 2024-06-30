@@ -7,7 +7,7 @@ const About = () => {
     <>
       <Navbar/>
       
-   <div  style={{ margin:"auto" , fontFamily:"monospace", height:"auto", position:"relative",
+   <div  style={{ margin:"auto" , height:"auto", position:"relative",
    wordWrap:"break-word"}} className="about">
    <h3 style={{margin:"auto", color:""}}>About SugarPine National</h3>
 

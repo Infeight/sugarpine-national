@@ -10,13 +10,13 @@ const Blog = () => {
   const blogs = async()=>{
     let data = await fetch('http://localhost:5002/blogs')
     let blogs = await data.json()
-    console.log(blogs.blogs)
+    // console.log(blogs.blogs)
     setBlogdata(blogs.blogs)
   }
 
   useEffect(()=>{
     blogs();
-  })
+  },[])
 
 
 

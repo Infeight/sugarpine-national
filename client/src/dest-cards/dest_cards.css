@@ -110,7 +110,8 @@
 .place-head{
     padding: 0.1vw;
     top: 0.5vw;
-    font-family: monospace;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
     position: absolute;
     font-size: 3rem;
     text-align: center;
@@ -163,7 +164,8 @@ animation: explore-btn-border 10s infinite ease;
 .explorebtn a{
     text-decoration: none;
     color: #232F3E;
-    font-family: cursive;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
 }
 @keyframes explore-btn-border {
     0%{
@@ -257,7 +259,8 @@ box-sizing: border-box;
         .explorebtn a{
             text-decoration: none;
             color:#232F3E ;
-            font-family: cursive;
+            font-family: "Exo 2", sans-serif;
+            font-optical-sizing: auto;
         }
     }}
 
@@ -337,7 +340,8 @@ box-sizing: border-box;
             .explorebtn a{
                 text-decoration: none;
                 color:#232F3E ;
-                font-family: cursive;
+                font-family: "Exo 2", sans-serif;
+                font-optical-sizing: auto;
             } 
         }}
 
@@ -380,8 +384,12 @@ box-sizing: border-box;
                 margin: 0vw 5%; 
                 left: 0%;
                 height: 80%;
+                overflow-y: scroll;
                 /* display: none; */
                 
+            }
+            .place-head::-webkit-scrollbar{
+                display: none;
             }
             .placename{
                 font-family: fantasy;
@@ -429,7 +437,8 @@ box-sizing: border-box;
                 text-decoration: none;
                 font-size: 4vw;
                 color: #232F3E;
-                font-family: cursive;
+                font-family: "Exo 2", sans-serif;
+                font-optical-sizing: auto;
 
             }
          

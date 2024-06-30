@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
 
+.loginwarn{
+    font-size: 1.9vw;
+    position: relative;
+    top: 5vw;
+    margin: auto;
+    text-align: center;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    color:#232F3E ;
+    background-color: #ffd86a;
+    display: none;
+}
 .contactdet{
     display: grid;
     grid-template-columns: 50% 50%;
@@ -23,6 +35,7 @@
     background-size: cover;
     mix-blend-mode: luminosity;
     max-height: 80vh;
+    height: 75vh;
 }
 .contactform form{
     height: 80%;
@@ -98,8 +111,23 @@
     margin: 0;;
     font-size: 2vw;
 }
+#contact-submit{
+    position: relative;
+    top: -5vw;
+   
+    font-size: 1.5vw;
+    border-radius: 0.5vw;
+    border: none;
+    left: 20vw;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    background-color: #ffd86a;
+    color: #232F3E;
+    /* left: 60vw; */
+}
 @media screen and (min-width:700px) {
     @media screen and (max-width:1200px) {
+        .loginwarn{font-size: 3vw;}
         .myimg{
             margin: 5vw auto 0;
             width: 30vw;
@@ -126,6 +154,10 @@
         .contactform input{
             font-size: 3vw;
         }
+        #contact-submit{
+            font-size: 2.5vw;
+        }
+        
     }
 }
 
@@ -135,6 +167,7 @@
         html{
             font-size: 19.5%;
         }
+        .loginwarn{font-size: 3vw;}
         .myimg{
             margin: 5vw auto 0;
             width: 30vw;
@@ -161,6 +194,9 @@
         .contactform input{
             font-size: 3vw;
         }
+        #contact-submit{
+            font-size: 2.5vw;
+        }
     }
 }
 
@@ -168,12 +204,22 @@
 
 @media screen and (min-width:300px) {
     @media screen and (max-width: 480px) {
+        .loginwarn{
+            font-size: 5vw;
+            top: 15vw;
+        }
         .contactdet{
             height: 60vh;
             margin: 20vw auto -5vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
         }
         .contactusinfo{
             font-size: 3.5vw;
+            display: none;
+            height: 60%;
         }
         .contactusinfo h3{
             font-size: 5.5vw;
@@ -184,29 +230,41 @@
             margin: 2vw 0;
         }
         .myimg{
-            height: 30vw;
-            width: 30vw;
+            height: 50vw;
+            width: 80vw;
         }
         .contactform form{
             max-width: 100%;
+            height: 100%;
             padding: 1vw;
+            display: flex;
+            flex-direction: column;
+            max-height: 100%;
+            margin: 0;
         }
         .contactform form label{
-            font-size: 4vw;
+            font-size: 5vw;
         }
         .contactform input{
-            font-size: 4vw;
+            font-size: 5vw;
             height: 8vw;
             color: white;
             background-color: #00000042;
         }
         .contactform textarea{
-            font-size: 4vw;
+            font-size: 5vw;
+            height: 50%;
             color: white;
             background-color: #00000042;
         }
         #contact-submit{
             font-size: 5vw;
+            position: relative;
+            width: 90vw;
+            left: 0vw;
+            background-color: #ffd86a;
+            color: #232F3E;
+            top: 2vw;
         }
     }
 }

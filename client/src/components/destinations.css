@@ -7,6 +7,7 @@
     top: 5.5rem;
     overflow: hidden;
 }
+.destination-cover{display: none;}
 .search{
     display: flex;
     position: relative;
@@ -19,7 +20,7 @@
 }
 .checkedoutimg{
     width: 80vw;
-    left: 10vw;
+  
     height: 40vh;
     top: 25vh;
     background-color: white;
@@ -37,12 +38,36 @@
 .checkedoutimg section{
     font-size: 2vw;
     margin: 20px;
-    font-family: cursive;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
     color: #232F3E;
 }
 .checkedoutimg img{
     height: 100%;
     width: 40%;
+}
+#checkoutclose{
+    position: relative;
+    /* left: 85%; */
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 1.2vw;
+    background-color: #ffd86a;
+    color: #232F3E;
+    border: none;
+    margin-left: 90%;
+}
+#closetripcheck{
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    position: absolute;
+    z-index: 4;
+    top: -1%;
+    left: 90%;
+    font-size: 1.2vw;
+    background-color: #ffd86a;
+    color: #232F3E;
+    border: none;
 }
 @keyframes search {
     from{
@@ -61,7 +86,9 @@
     font-size: 1.5vw;
     border-radius: 3rem;
     border: none;
-    font-family: monospace;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
     box-shadow: 0rem 0rem 2rem;
     outline: none;
 }
@@ -103,7 +130,9 @@
     border-radius: 3rem;
     border: none;
     background-color: white;
-    font-family: monospace;
+    font-family: "Exo 2", sans-serif;
+    font-weight: 600;
+    font-optical-sizing: auto;
     box-shadow: 0rem 0rem 1rem;
     height: 5rem;
     width: 10vw;
@@ -121,7 +150,9 @@
 .place-name h3{
     margin: 0rem;
     font-size: 3.5vw;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    color: #232F3E;
     text-align: center;
 
 }
@@ -176,7 +207,8 @@
     }
     .insta-model li{
         font-size: 2rem;
-        font-family: cursive;
+        font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
         margin: 1rem;
        
     }
@@ -210,7 +242,8 @@
     height: 8vh;
     font-size: 2.5vw;
     text-align: center;
-    font-family: math;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
     letter-spacing: 0.4rem;
     /* animation: head-color 8s infinite reverse ease; */
   
@@ -250,7 +283,8 @@
     position: relative;
     text-align: center;
     color: #232F3E;
-   
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
     /* animation: head-color 8s infinite reverse ease; */
     top: 0%;
 }
@@ -263,7 +297,8 @@
     top: 0rem;
     margin: 0.5rem;
     text-align: center;
-    font-family: math;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
     letter-spacing: 0.3rem;
     /* animation: head-color 8s infinite reverse ease; */
 }
@@ -297,7 +332,8 @@
     display: flex;
     align-items: center;
     justify-content: left;
-    font-family: monospace;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
     letter-spacing: 0.1rem;
     padding: 2%;
     font-size: 3rem;
@@ -328,7 +364,7 @@
     box-shadow: 0rem 0rem 3rem;
 }
 .restimg{
-    width: 40%;
+    width: 100%;
     height: 100%;
     background-color: antiquewhite;
     border-radius: 3rem;
@@ -350,7 +386,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: monospace;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
     letter-spacing: 0.1rem;
     padding: 2%;
     font-size: 3rem;
@@ -364,7 +401,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: monospace;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
     letter-spacing: 0.1rem;
     padding: 2%;
     font-size: 3rem;
@@ -387,7 +425,8 @@
     display: flex;
     align-items: center;
   
-    font-family: monospace;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
     letter-spacing: 0.1rem;
     padding: 2%;
     font-size: 3rem;
@@ -407,7 +446,8 @@
     font-size: 3rem;
     top: -0.5rem;
     left: 1rem;
-    font-family: monospace;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
 }
 .webpage{
     left: 1rem;
@@ -417,7 +457,8 @@
     list-style: none;
 }
 .webpage a{
-    font-family: monospace;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
     color: teal;
     text-decoration: none;
 }
@@ -429,7 +470,8 @@
     position: relative;
     top: 2.2rem;
     left: -15rem;
-    font-family: monospace;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
 }
 
 .tourspot{
@@ -457,7 +499,8 @@
 .wikidata{
     list-style: none;
     font-size: 3rem;
-    font-family: monospace;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
     width: 93%;
     padding-left: 5rem;
 }
@@ -478,7 +521,10 @@
 #hotels{
     width: 80%;
     margin-left: 10%;
-    font-family: monospace;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    letter-spacing: 0.2vw;
+    font-weight: 600;
     font-size: 1.3vw;
     border: none;
     border-radius: 1rem;
@@ -506,7 +552,8 @@ transition-duration: 0.5s;
 .enterdate{
     height: 4rem;
     font-size: 1vw;
-    font-family: monospace;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
     text-align: center;
     border-radius: 1rem;
     border: none;
@@ -516,7 +563,10 @@ transition-duration: 0.5s;
 #details{
     width: 80%;
     margin-left: 10%;
-    font-family: monospace;
+    font-family: "Exo 2", sans-serif;
+    letter-spacing: 0.2vw;
+    font-weight: 600;
+    font-optical-sizing: auto;
     font-size: 1.3vw;
     border: none;
     border-radius: 1rem;
@@ -536,7 +586,10 @@ transition-duration: 0.5s;
 #rests{
     width: 80%;
     margin-left: 10%;
-    font-family: monospace;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    letter-spacing: 0.2vw;
     font-size: 1.3vw;
     border: none;
     border-radius: 1rem;
@@ -583,7 +636,8 @@ transition-duration: 0.5s;
     position: sticky;
     left: 0rem;
     color: #232F3E;
-    font-family: math;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
     letter-spacing: 0.2vw;
 
     /* animation: head-color 8s infinite reverse ease; */
@@ -647,7 +701,8 @@ transition-duration: 0.5s;
 .guidename{
     width: 95%;
     height: 1.5vw;
-    font-family: monospace;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
     /* font-size: 2rem; */
     text-align: center;
     margin: 0% 2.5%;
@@ -658,7 +713,9 @@ transition-duration: 0.5s;
 .exp{
     height: 1.4vw;
     font-size: 1vw;
-    font-family: monospace;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
     width: 95%;
     margin: 0% 2.5%;
     color: #232F3E;
@@ -667,7 +724,8 @@ transition-duration: 0.5s;
 .guide-price{
     height: 1.5vw;
     font-size: 1.2vw;
-    font-family: monospace;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
     font-weight: 800;
     width: 95%;
     margin: 0% 2.5%;
@@ -690,7 +748,8 @@ transition-duration: 0.5s;
 .notfound{
     text-align: center;
     font-size: 3rem;
-    font-family: monospace;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
     position: relative;
     top: 30rem;
 }
@@ -730,8 +789,6 @@ transition-duration: 0.5s;
     content: "👨🏻‍💼";
 }
 #noofdays{
-    /* position: absolute;
-    left: 85rem; */
     border: none;
     font-size: 3.5rem;
     width: 15vw;
@@ -741,21 +798,28 @@ transition-duration: 0.5s;
     text-indent: 1rem;
     height: 3.5vh;
     margin-right: 1vw;
-    /* top: 3rem; */
+    background-color: #232F3E;
+    color: #ffd86a;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
 }
 #checkout{
     /* position: absolute;
         left: 85%;
         top: 15.2rem; */
+        font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
         width: fit-content;
         border-radius: 1rem;
         border: none;
         box-shadow: 0rem 0rem 1rem;
-        background-color: teal;
-        color: aliceblue;
+        background-color: #ffd86a;
+        color: #232F3E;
         font-size: 1.6vw;
         height: 2.4vw;
-        box-shadow: 0rem 0rem 1rem black;
+        box-shadow: 0rem 0rem 1rem #232F3E;
 }
 #tourspot-selected{
     background-color: #b7ffb7;
@@ -772,38 +836,48 @@ transition-duration: 0.5s;
     /* background-color: antiquewhite; */
 }
 .total-price{
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
     width: fit-content;
     position: relative;
     font-size: 1.6vw;
     margin-right: 1vw;
-    /* top: -7rem; */
-    /* left: 28rem; */
-    /* border: 1px solid; */
+    color: #ffd86a;
     display: flex;
     align-items: center;
-    background-color: #ffd107;
+    background-color: #232F3E;
     border-radius: 1rem;
-    /* color: unset; */
+
     box-shadow: 0rem 0rem 2rem inset;
-    /* text-align: center; */
+    
     justify-content: center;
 }
 .weather-initial{
-    /* position: sticky; */
+    color: #ffd86a;
     position: relative;
     width: fit-content;
     height: auto;
    box-shadow: 0rem 0rem 3rem black inset;
-    /* background-color: black; */
-    /* top: 7rem; */
-    /* margin-top: 8rem; */
     border-radius: 3rem;
     left: 1rem;
     opacity: 88%;
     z-index: 2;
+    font-weight: 500;
 }
 #forecast{
     display: none;
+    /* display: flex; */
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+.currentweather{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
 }
 .currentweather:hover{
     cursor: pointer;
@@ -812,15 +886,13 @@ transition-duration: 0.5s;
     }
 }
 #moreinfo{
-       /* width: 90%; */
        height: 4rem;
        margin: 0% 16.5%;
-    color: white;
+    color: #ffd86a;
     border: none;
     background: transparent;
     margin-top: 0.5rem;
     border-radius: 1rem 1rem 1rem 1rem;
-    /* box-shadow: 0rem 0rem 1rem black; */
     font-size: 1.2vw;
 }
 .loginconfirm{
@@ -844,11 +916,15 @@ transition-duration: 0.5s;
     min-height: 12vw;
 width: fit-content;
 z-index: 2;
+color: #232F3E;
 background-color: white;
 margin: auto;
 box-sizing: content-box;
 box-shadow: 1rem 1rem 2rem;
 border-radius: 3rem;
+font-family: "Exo 2", sans-serif;
+font-optical-sizing: auto;
+font-weight: 600;
 }
 .temp{
     font-size: 1.5vw;
@@ -872,21 +948,6 @@ border-radius: 3rem;
     display: contents;
 }
 
-
-/* @keyframes  body-back-color {
-    0%{
-        background: linear-gradient(to right, #f47595, #b15a9a,#643ba2);
-       
-    }
-    50%{
-        background:  linear-gradient(to right, #fd475e, #c4659f, #7d8afa);
-        
-    }
-    100%{
-        background: linear-gradient(to right, #dd528d, #ff8c79, #fbae52);
-       
-    }
-} */
 @keyframes 
 design-back-color {
     0%{
@@ -930,6 +991,7 @@ design-back-color {
 .searchlinks a {
     font-size: 1.9vw;
     /* font-family: fantasy; */
+    color:#232F3E ;
     text-decoration: none;
     font-family: "Exo 2", sans-serif;
     font-optical-sizing: auto;
@@ -938,9 +1000,7 @@ design-back-color {
 
 }
 .searchlinks a :hover{
-    background: linear-gradient(to right, black, rgb(190, 2, 2)) ;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
+  color: #ffd86a;
 }
 .wikipagecont{
     font-size: 1.5vw;
@@ -950,9 +1010,9 @@ design-back-color {
     align-items: center;
     justify-content: center;
     font-family: math;
-    background: linear-gradient(to right, black, rgb(190, 2, 2)) ;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
+    color: #232F3E;
+
+  
 
 }
 .wikipagebackbtn{
@@ -972,6 +1032,7 @@ design-back-color {
         html{
             font-size: 21%;
         }
+        .destination-cover{display: none;}
         .search{
             margin-top: 20rem;
             top: 0rem;
@@ -988,6 +1049,13 @@ design-back-color {
         }
         .checkedoutimg section{
             font-size: 2.5vw;
+        }
+        #checkoutclose{
+            font-size: 3vw;
+            margin-left: 65%;
+        }#closetripcheck{
+            font-size: 3vw;
+            left: 90%;
         }
         .searchbar{
             height:5vw;
@@ -1234,6 +1302,7 @@ design-back-color {
         html{
             font-size: 19.5%;
         }
+        .destination-cover{display: none;}
         .search{
             margin-top: 20rem;
             top: 0rem;
@@ -1250,6 +1319,14 @@ design-back-color {
         }
         .checkedoutimg section{
             font-size: 2.5vw;
+        }
+        #checkoutclose{
+            font-size: 3vw;
+            margin-left: 65%;
+        }
+        #closetripcheck{
+            font-size: 3vw;
+            left: 90%;
         }
         .searchbar{
             height:5vw;
@@ -1493,7 +1570,16 @@ design-back-color {
 
 @media screen and (min-width:300px) {
     @media screen and (max-width:480px) {
-       
+       .destination-cover{
+        display: block;
+        width: 100vw;
+    height: 14vw;
+    position: absolute;
+    background-color: aquamarine;
+       }
+       .destination-cover img{
+        width: 100%;
+       }
         .checkedoutimg{
             flex-direction: column;
             height: 50vh;
@@ -1508,6 +1594,14 @@ design-back-color {
         }
         .checkedoutimg img{
             width: 100%;
+        }
+        #checkoutclose{
+            font-size: 4vw;
+            margin-left: 80%;
+        }
+        #closetripcheck{
+            font-size: 4vw;
+            margin-left: -7%;
         }
         .searchbar{
             width: 50vw;
@@ -1536,6 +1630,7 @@ design-back-color {
         }
         .wikipagecont{
             width: 98vw;
+            padding-left: 40vw;
             font-size: 3.8vw;
         }
         .wikipagebackbtn{
@@ -1619,7 +1714,9 @@ design-back-color {
             .insta-model li {
                 font-size: 6rem;
                 margin: 2rem;
-                font-family: cursive;
+                font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600
             }
            
         }
@@ -1628,20 +1725,22 @@ design-back-color {
         }
         .ourservices{
             width: 96vw;
-            height: 80vh;
+            height: 60vh;
             overflow-x: scroll;
             scroll-behavior: smooth;
             scroll-snap-type: x mandatory;
-            margin: 2vw;
+            margin: auto;
             top: 0rem;
             border-radius: 3vw;
+            border: 1vw solid;
         }
      
         .service-cont{
             width: 96vw;
-            border-radius: 3vw;
+            /* border-radius: 3vw; */
             scroll-snap-align: start;
-            box-shadow: 2vw 0vw 4vw inset black;
+            box-shadow: 0vw 0vw 0vw ;
+            /* box-shadow: 2vw 0vw 4vw inset black; */
             /* margin: 0 1vw; */
         }
         .ourservices-slide{
@@ -1654,7 +1753,7 @@ design-back-color {
             font-size: 8vw;
         }
         #hotelload{
-            height: 70%;
+            height: 60%;
 
         }
         #restload{
@@ -1678,12 +1777,14 @@ design-back-color {
             font-size: 4.5vw;
             top: 1vw;
             border-radius: 2vw;
+            letter-spacing: 0.5vw;
         }
         .service-cont p {
             font-size: 4vw;
             display: none;
         }
         #rests{
+            letter-spacing: 0.5vw;
             font-size: 4.5vw;
             position: relative;
             top: 13vw;
@@ -1691,12 +1792,14 @@ design-back-color {
         }
         #restaurant{
             top: 12vw;
+            letter-spacing: 0.5vw;
         }
         #details{
             font-size: 4.5vw;
             position: relative;
             top: 13vw;
             border-radius: 2vw;
+            letter-spacing: 0.5vw;
         }
         .notfound{
             font-size: 7rem;
@@ -1755,7 +1858,7 @@ design-back-color {
         .guide-cont{
             height: 80vw;
             top: 10rem;
-            box-shadow: 1vw -1vw 4vw inset;
+            /* box-shadow: 1vw -1vw 4vw inset; */
             border-radius: 3vw;
         }
         .guideslide li{
@@ -1794,6 +1897,9 @@ design-back-color {
             font-size: 3vw;
 
         }
+        .humidity{
+            font-size: 3vw;
+        }
         .astronomy{
             font-size: 3vw;
         }
@@ -1810,18 +1916,18 @@ design-back-color {
             min-height: 35vw;
         }
         #noofdays{
-            width: 30vw;
+            width: 28vw;
             font-size: 4vw;
             height: 6.5vw;
             margin-bottom: 1vw;
         }
         #checkout{
-            font-size: 4.5vw;
-            height: 5.5vw;
+            font-size: 4vw;
+            height: 7.5vw;
             margin-bottom: 1vw;
         }
         .total-price{
-            font-size: 3.5vw;
+            font-size: 4vw;
             height: 8vw;
             margin-bottom: 1vw;
 
@@ -1869,6 +1975,7 @@ design-back-color {
         .webpage{
             font-size: 4vw;
             margin-bottom: 2vw;
+           
         }
         .tourspot{
             width: 100%;
