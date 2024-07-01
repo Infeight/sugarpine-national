@@ -559,7 +559,7 @@ const Destinations = () => {
                 />
               )
             })
-              : <div className="notfound"> Sorry,No Hotels Found.😔 <br /> PLease Check for local hotels on <a href="https://www.google.com/">Google</a></div>}
+              : <div className="notfound"> Sorry,No Hotels Found.😔 <br /> PLease ask our AI assistant (Jenn) or Check for local hotels on <a href="https://www.google.com/">Google</a></div>}
           </div>
 
 
@@ -575,7 +575,7 @@ const Destinations = () => {
                   webpage={data1?.website ? data1?.website : ""} rating={data1?.rating ? data1?.rating : ""} />
               )
 
-            }) : <div className="notfound"> Sorry,No Restaurants Found.😔 <br /> PLease Check for local restaurants on <a href="https://www.google.com/">Google</a></div>}
+            }) : <div className="notfound"> Sorry,No Restaurants Found.😔 <br /> PLease ask our AI assistant (Jenn) or Check for local restaurants on <a href="https://www.google.com/">Google</a></div>}
           </div>
 
 
