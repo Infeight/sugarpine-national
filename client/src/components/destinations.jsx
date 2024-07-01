@@ -279,7 +279,7 @@ const Destinations = () => {
       
     });
 
-    e.target.closest(".guides").style.backgroundColor = "#a5ffa5"
+    e.target.closest(".guides").style.backgroundColor = "rgb(214 255 214)"
 
   }
  if(guidedata.guidename.length!=0){
@@ -297,7 +297,7 @@ const Destinations = () => {
       
     });
 
-    e.target.closest(".hotels").style.backgroundColor = "#a5ffa5"
+    e.target.closest(".hotels").style.backgroundColor = "rgb(214 255 214)"
   }
 
   const selectTour = async (e) => {
@@ -410,7 +410,7 @@ const Destinations = () => {
       
     });
 
-    e.target.closest(".guides").style.backgroundColor = "#a5ffa5"
+    e.target.closest(".guides").style.backgroundColor = "rgb(214 255 214)"
   }
 
   const closecheckout = ()=>{
