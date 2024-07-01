@@ -906,6 +906,7 @@ transition-duration: 0.5s;
     border-radius: 5vw;
 }
 .tripcheck-weather-cont{
+    min-width:50vw;
     padding: 0rem 1rem;
     display: flex;
     position: sticky;
