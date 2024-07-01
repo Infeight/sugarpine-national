@@ -66,6 +66,7 @@
     top: 12rem;
     display: flex;
     color: #232F3E;
+    cursor: pointer;
 }
 
 @media screen and (min-width:700px) {

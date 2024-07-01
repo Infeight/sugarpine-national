@@ -12,8 +12,9 @@ const Footer = () => {
 
         <div className="followus">Follow us on:
         <li style={{listStyle:"none",marginRight:"2rem"}}>
-        <FaInstagram />
-</li>
+        
+        <a href="https://www.instagram.com/sugarpinenational/"><FaInstagram /></a>
+                        </li>
         <li style={{listStyle:"none",marginRight:"2rem"}}><FaFacebookSquare /></li>
         <li style={{listStyle:"none",marginRight:"2rem"}}><FaSquareXTwitter /></li></div>
         <div className="footerdesc">

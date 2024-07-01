@@ -59,9 +59,9 @@ const sendcomplaint =()=>{
 
           <h2 style={{}}>Connect with us:</h2>
 
-          <a style={{ color: "aliceblue", marginRight: "1vw" }} href=""><FaFacebookSquare /></a>
-          <a style={{ color: "aliceblue", marginRight: "1vw" }} href=""><FaInstagram /></a>
-          <a style={{ color: "aliceblue", marginRight: "1vw" }} href=""><FaSquareXTwitter /></a>  <br />
+          <a style={{ color: "#232F3E", marginRight: "1vw" }} href=""><FaFacebookSquare /></a>
+          <a style={{ color: "#232F3E", marginRight: "1vw" }} href="https://www.instagram.com/sugarpinenational/"><FaInstagram /></a>
+          <a style={{ color: "#232F3E", marginRight: "1vw" }} href=""><FaSquareXTwitter /></a>  <br />
           Your adventure starts with us, and we’re just a message away. We look forward to hearing from you!
         </div>
         <div className="contactform" style={{ gridRow: "1/8" }}>

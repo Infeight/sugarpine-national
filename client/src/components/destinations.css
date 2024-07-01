@@ -1016,6 +1016,7 @@ design-back-color {
 
 }
 .wikipagebackbtn{
+    z-index: 3;
     position: sticky;
     top: 20rem;
     border-radius: 2vw;
@@ -1630,7 +1631,7 @@ design-back-color {
         }
         .wikipagecont{
             width: 98vw;
-            padding-left: 40vw;
+            padding-left: 15vw;
             font-size: 3.8vw;
         }
         .wikipagebackbtn{
@@ -1816,10 +1817,10 @@ design-back-color {
     
         }
         .service-nav a{
-            font-size: 5vw;
+            font-size: 4.5vw;
             text-decoration: none;
             font-family: monospace;
-            margin-right: 4vw;
+            /* margin-right: 4vw; */
             box-shadow: 1vw 1vw 3vw;
             padding: 1.5vw;
             box-sizing: border-box;

@@ -69,6 +69,7 @@
     /* background: linear-gradient(to right,black, rgb(144, 7, 7)); */
     /* -webkit-text-fill-color: transparent;
     -webkit-background-clip: text; */
+    font-weight: 600;
     width: 70%;
     height: 80%;
     font-size: 3rem;
@@ -110,7 +111,7 @@
     color: #232F3E;
     background: transparent;
     border-radius: 2rem  ;
-    
+    font-weight: 400;
     overflow: hidden;
 
     
@@ -289,6 +290,7 @@
     /* animation-name: none; */
     border: 2px solid #232F3E;
     animation-iteration-count: 1;
+    cursor: pointer;
 }
 #suggest:hover{
     background: linear-gradient(45deg
@@ -537,7 +539,7 @@
         }
         .options li{
             height: 100%;
-            overflow: scroll;
+            /* overflow: scroll; */
             border:0.5vw solid #232F3E;
         }
         .options li:hover{

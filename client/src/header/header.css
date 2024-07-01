@@ -23,7 +23,7 @@ body::-webkit-scrollbar {
   justify-content: center;
   height: 100vh;
   background-color: #ffd86a;
-  background-image: url('coverdoodle.png');
+  background-image: url('../../public/coverdoodle.png');
 
   /* background-size: contain; */
   /* background-repeat: no-repeat; */
@@ -153,7 +153,9 @@ position: relative;
   top: -15rem;
   text-align: center;
   color: white;
-  font-family: monospace;
+  font-weight: 600;
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
 }
 
 .main-head-img {
@@ -313,6 +315,7 @@ position: relative;
     }
 
     .signin-cap {
+      top: -8rem;
       font-size: 4vw;
       z-index: 2;
      backdrop-filter: blur(2px);
@@ -393,6 +396,7 @@ position: relative;
     }
 
     .signin-cap {
+      top: -8rem;
       font-size: 4vw;
       z-index: 2;
      backdrop-filter: blur(2px);
@@ -468,6 +472,7 @@ position: relative;
       font-size: 4vw;
       margin: 0 auto;
       width: 60%;
+      box-shadow: 0 0 0 ;
     }
 
     .signin-cap {

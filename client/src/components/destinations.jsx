@@ -210,7 +210,7 @@ const Destinations = () => {
       const params = new URLSearchParams({
         action: 'query',
         list: 'search',
-        srsearch: `Tourist locations in ${locname}`,
+        srsearch: `list of Famous cultural sites and foods in ${locname}`,
         format: 'json',
         origin: "*"
       })
