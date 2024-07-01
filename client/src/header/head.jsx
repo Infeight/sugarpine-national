@@ -62,11 +62,11 @@ const Head = () => {
     localStorage.setItem("loggeduser", "");
     localStorage.setItem("logindet-mail", "")
     localStorage.setItem("login-phone","")
-    let q = fetch('http://localhost:5002/logout', { method: 'post', headers: { "Content-Type": "application/text" }, body: loggeduser })
+    let q = fetch('https://sugarpine-national-server.vercel.app/logout', { method: 'post', headers: { "Content-Type": "application/text" }, body: loggeduser })
   }
 
   const loggeduserdata = async () => {
-    let alllogins = await fetch('http://localhost:5002/logins')
+    let alllogins = await fetch('https://sugarpine-national-server.vercel.app/logins')
     let getlogins = await alllogins.json()
     console.log("jhviuhoi")
     getlogins.logins.forEach((elem) => {
@@ -87,7 +87,7 @@ const Head = () => {
     }
 
     console.log("worked")
-    let r = fetch('http://localhost:5002/login', { method: 'post', headers: { "Content-Type": "application/json" }, body: JSON.stringify(user) })
+    let r = fetch('https://sugarpine-national-server.vercel.app/login', { method: 'post', headers: { "Content-Type": "application/json" }, body: JSON.stringify(user) })
 
   }
 
