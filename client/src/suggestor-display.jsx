@@ -8,7 +8,7 @@ const Suggestordisplay = () => {
 const[suggestions,setSuggestions]= useState([]);
 
 const getsuggestions = async()=>{
-  let  data = await fetch('http://localhost:5002/suggestions')
+  let  data = await fetch('https://sugarpine-national-server.vercel.app/suggestions')
   let suggestions = await data.json();
    // console.log(suggestions)
    setSuggestions(suggestions.suggestions)
