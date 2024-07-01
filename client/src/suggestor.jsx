@@ -23,7 +23,7 @@ const Suggestor = () => {
     const updatename = async()=>{
      
 
-        let r= fetch('http://localhost:5002/' , {method:'post',headers:{"Content-Type": "application/json"} ,body:JSON.stringify(name)})
+        let r= fetch('https://sugarpine-national-server.vercel.app/' , {method:'post',headers:{"Content-Type": "application/json"} ,body:JSON.stringify(name)})
        
       // console.log(r)
       document.getElementById('suggest').style.animationName ='clicked'
