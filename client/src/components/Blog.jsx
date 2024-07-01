@@ -8,7 +8,7 @@ const Blog = () => {
   const [blogdata,setBlogdata] = useState([]);
 
   const blogs = async()=>{
-    let data = await fetch('http://localhost:5002/blogs')
+    let data = await fetch('https://sugarpine-national-server.vercel.app/blogs')
     let blogs = await data.json()
     // console.log(blogs.blogs)
     setBlogdata(blogs.blogs)

@@ -354,7 +354,7 @@ const Destinations = () => {
         },
       );
 
-    let r = fetch('http://localhost:5002/tripdetails', { method: 'post', headers: { "Content-Type": "application/json" }, body: JSON.stringify(totaltrip) })
+    let r = fetch('https://sugarpine-national-server.vercel.app/tripdetails', { method: 'post', headers: { "Content-Type": "application/json" }, body: JSON.stringify(totaltrip) })
   };
 
   const handledays = (e) => {
