@@ -107,7 +107,7 @@ const Destinations = () => {
     Total_price: ` ${((Number.parseInt(guidedata.guideprice) / 2) * (Number.parseInt(noofdays.days))) + (Number.parseInt(triphotels.hotelprice) * (Number.parseInt(noofdays.days))) + ((Number.parseInt(transport.transportprice)) * Number.parseInt(noofdays.days))}`
   }
 
-  const [checkoutsuccess, setCheckoutsuccess] = useState(false)
+  const [checkoutsuccess, setCheckoutsuccess] = useState(true)
 
   //FUNCTIONS//
 
@@ -270,11 +270,34 @@ const Destinations = () => {
   }
   const handleguide = (e) => {
     setGuidedata({ ...guidedata, guidename: e.target.closest(".guides").querySelector(".guidename").innerText, guideprice: e.target.closest(".guides").querySelector(".guide-price").innerText })
+    if(document.getElementById("tripcheck-weather-cont").style.display = "none"){
+      document.getElementById("tripcheck-weather-cont").style.display ="flex"
+    }
+
+    e.target.closest(".guideslide").querySelectorAll(".guides").forEach(element => {
+      element.style.backgroundColor = "transparent"
+      
+    });
+
+    e.target.closest(".guides").style.backgroundColor = "#a5ffa5"
 
   }
+ if(guidedata.guidename.length!=0){
+
+ }
 
   const triphotel = (e) => {
+
     setTriphotels({ ...triphotels, hotelname: e.target.closest(".hotelname").innerText, hotelprice: "2000" })
+    if(document.getElementById("tripcheck-weather-cont").style.display = "none"){
+      document.getElementById("tripcheck-weather-cont").style.display ="flex"
+    }
+    e.target.closest("#hotels1").querySelectorAll(".hotels").forEach(element => {
+      element.style.backgroundColor = "transparent"
+      
+    });
+
+    e.target.closest(".hotels").style.backgroundColor = "#a5ffa5"
   }
 
   const selectTour = async (e) => {
@@ -379,6 +402,15 @@ const Destinations = () => {
 
   const handlevehicles = (e) => {
     setTransport({ ...transport, transportname: e.target.closest(".guides").querySelector(".exp").innerText, transportprice: e.target.closest(".guides").querySelector(".guidename").innerText })
+    if(document.getElementById("tripcheck-weather-cont").style.display = "none"){
+      document.getElementById("tripcheck-weather-cont").style.display ="flex"
+    }
+    e.target.closest(".guideslide").querySelectorAll(".guides").forEach(element => {
+      element.style.backgroundColor = "transparent"
+      
+    });
+
+    e.target.closest(".guides").style.backgroundColor = "#a5ffa5"
   }
 
   const closecheckout = ()=>{

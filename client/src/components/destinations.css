@@ -915,7 +915,7 @@ transition-duration: 0.5s;
     height: auto;
     min-height: 12vw;
 width: fit-content;
-z-index: 2;
+z-index: 5;
 color: #232F3E;
 background-color: white;
 margin: auto;
