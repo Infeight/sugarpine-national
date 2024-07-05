@@ -279,7 +279,7 @@ const Destinations = () => {
       
     });
 
-    e.target.closest(".guides").style.backgroundColor = "#a5ffa5"
+    e.target.closest(".guides").style.backgroundColor = "rgb(214 255 214)"
 
   }
  if(guidedata.guidename.length!=0){
@@ -297,7 +297,7 @@ const Destinations = () => {
       
     });
 
-    e.target.closest(".hotels").style.backgroundColor = "#a5ffa5"
+    e.target.closest(".hotels").style.backgroundColor = "rgb(214 255 214)"
   }
 
   const selectTour = async (e) => {
@@ -410,7 +410,7 @@ const Destinations = () => {
       
     });
 
-    e.target.closest(".guides").style.backgroundColor = "#a5ffa5"
+    e.target.closest(".guides").style.backgroundColor = "rgb(214 255 214)"
   }
 
   const closecheckout = ()=>{
@@ -559,7 +559,11 @@ const Destinations = () => {
                 />
               )
             })
+
               : <div className="notfound"><img src="nohotel.jpeg" alt="" /> <br /> PLease Check for local hotels on <a href="https://www.google.com/">Google</a></div>}
+
+              {/* : <div className="notfound"> Sorry,No Hotels Found.😔 <br /> PLease ask our AI assistant (Jenn) or Check for local hotels on <a href="https://www.google.com/">Google</a></div> */}
+
           </div>
 
 
@@ -575,7 +579,10 @@ const Destinations = () => {
                   webpage={data1?.website ? data1?.website : ""} rating={data1?.rating ? data1?.rating : ""} />
               )
 
+
             }) : <div className="notfound"> <img src="norestaurants.jpeg" alt="" /> <br /> PLease Check for local restaurants on <a href="https://www.google.com/">Google</a></div>}
+
+            {/* ) : <div className="notfound"> Sorry,No Restaurants Found.😔 <br /> PLease ask our AI assistant (Jenn) or Check for local restaurants on <a href="https://www.google.com/">Google</a></div> */}
           </div>
 
 
