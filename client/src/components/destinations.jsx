@@ -104,10 +104,10 @@ const Destinations = () => {
     Hotel: triphotels.hotelname ? triphotels.hotelname : "Not selected",
     Checkin: dates.indate,
     Checkout: dates.outdate,
-    Total_price: ` ${((Number.parseInt(guidedata.guideprice) / 2) * (Number.parseInt(noofdays.days))) + (Number.parseInt(triphotels.hotelprice) * (Number.parseInt(noofdays.days))) + ((Number.parseInt(transport.transportprice)) * Number.parseInt(noofdays.days))}`
+    Total_price: ` ${((Number.parseInt(guidedata.guideprice?guidedata.guideprice:0) / 2) * (Number.parseInt(noofdays.days))) + (Number.parseInt((triphotels.hotelprice?triphotels.hotelprice:0)) * (Number.parseInt(noofdays.days))) + ((Number.parseInt(transport.transportprice?transport.transportprice:0)) * Number.parseInt(noofdays.days))}`
   }
 
-  const [checkoutsuccess, setCheckoutsuccess] = useState(true)
+  const [checkoutsuccess, setCheckoutsuccess] = useState(false)
 
   //FUNCTIONS//
 
@@ -362,7 +362,7 @@ const Destinations = () => {
   }
 
   let naemrr; let z = 0;
-  const namearr = ["", "India", "Goa", "Manali", "Nainital", "Agra", "Mussouri", "Lakshadweep", "Coorg", "Ujjain", "Ooty"]
+  const namearr = ["India", "Goa", "Manali", "Nainital", "Agra", "Mussouri", "Lakshadweep", "Coorg", "Ujjain", "Ooty"]
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -438,7 +438,7 @@ const Destinations = () => {
   Check in: ${dates.indate}, \n
    Check out: ${dates.outdate}, \n
        Locations: ${tourspottry}, \n
-       Total price: ${((Number.parseInt(guidedata.guideprice) / 2) * (Number.parseInt(noofdays.days))) + (Number.parseInt(triphotels.hotelprice) * (Number.parseInt(noofdays.days))) + ((Number.parseInt(transport.transportprice)) * Number.parseInt(noofdays.days))}/-`} />
+       Total price: ${((Number.parseInt(guidedata.guideprice?guidedata.guideprice:0) / 2) * (Number.parseInt(noofdays.days))) + (Number.parseInt((triphotels.hotelprice?triphotels.hotelprice:0)) * (Number.parseInt(noofdays.days))) + ((Number.parseInt(transport.transportprice?transport.transportprice:0)) * Number.parseInt(noofdays.days))}/-`} />
       </form>
 
 
@@ -468,7 +468,7 @@ const Destinations = () => {
           <li id='tripname' >{locname.slice(0, 19)}...</li>
           <li className='price-checkout-cont' style={{ width: "100%", display: "flex", height: "auto", alignItems: "center", justifyContent: "space-between" }}>
             <input style={{ zIndex: "1" }} onChange={handledays} value={noofdays.days} id='noofdays' type="number" placeholder='No of Days!' />
-            <div className="total-price" style={{ height: "4vh" }}>💰Total :{((Number.parseInt(guidedata.guideprice) / 2) * Number.parseInt(noofdays.days)) + Number.parseInt(triphotels.hotelprice * Number.parseInt(noofdays.days)) + ((Number.parseInt(transport.transportprice)) * Number.parseInt(noofdays.days))}/-</div>
+            <div className="total-price" style={{ height: "4vh" }}>💰Total :{((Number.parseInt(guidedata.guideprice?guidedata.guideprice:0) / 2) * Number.parseInt(noofdays.days)) + Number.parseInt((triphotels.hotelprice?triphotels.hotelprice :0) * Number.parseInt(noofdays.days)) + ((Number.parseInt(transport.transportprice?transport.transportprice:0)) * Number.parseInt(noofdays.days))}/-</div>
             <button id='checkout' onClick={() => { tripdetails() }} style={{ zIndex: "1" }}>Check Out</button>
           </li>
 
@@ -559,7 +559,7 @@ const Destinations = () => {
                 />
               )
             })
-              : <div className="notfound"> Sorry,No Hotels Found.😔 <br /> PLease Check for local hotels on <a href="https://www.google.com/">Google</a></div>}
+              : <div className="notfound"><img src="nohotel.jpeg" alt="" /> <br /> PLease Check for local hotels on <a href="https://www.google.com/">Google</a></div>}
           </div>
 
 
@@ -575,7 +575,7 @@ const Destinations = () => {
                   webpage={data1?.website ? data1?.website : ""} rating={data1?.rating ? data1?.rating : ""} />
               )
 
-            }) : <div className="notfound"> Sorry,No Restaurants Found.😔 <br /> PLease Check for local restaurants on <a href="https://www.google.com/">Google</a></div>}
+            }) : <div className="notfound"> <img src="norestaurants.jpeg" alt="" /> <br /> PLease Check for local restaurants on <a href="https://www.google.com/">Google</a></div>}
           </div>
 
 

@@ -751,7 +751,7 @@ transition-duration: 0.5s;
     font-family: "Exo 2", sans-serif;
     font-optical-sizing: auto;
     position: relative;
-    top: 30rem;
+    top: 5rem;
 }
 
 .foot{
@@ -1294,6 +1294,9 @@ design-back-color {
         .loginconfirm{
             font-size: 3vw;
         }
+        .notfound{
+            top: 1rem;
+        }
        
     }
 }
@@ -1565,6 +1568,9 @@ design-back-color {
         .loginconfirm{
             font-size: 3vw;
         }
+        .notfound{
+            top: 10rem;
+        }
        
     }
 }
@@ -1683,7 +1689,7 @@ design-back-color {
 
         .images-container{
             .loc-img{
-                width: 98vw;
+                width: 96vw;
                 scroll-snap-align: start;
                 margin-right: 0;
                 height: 50%;
@@ -1693,6 +1699,7 @@ design-back-color {
                 align-items: center;
                 justify-content: flex-start;
                 background-color: whitesmoke;
+                border: 2px solid #232F3E;
     
             }
            
@@ -2003,6 +2010,14 @@ design-back-color {
         }
         .loginconfirm{
             font-size: 3vw;
+        }
+        .notfound{
+            top: 10rem;
+        }
+        .notfound img{
+            width: 95%;
+            position: relative;
+            border-radius: 2vw;
         }
 
     }

@@ -26,14 +26,14 @@ const Head = () => {
 
   {
     let naemrr; let a = 0;
-    const namearr = ["", "Wake up to the stunning Himalayan sunrise and cup of Masala chai!","Explore Rajasthan's majestic forts where each corner whispers History!","Relax on Goa's golden beaches feeling the warmth of sand!",
+    const namearr = ["","Wake up to the stunning Himalayan sunrise and cup of Masala chai!","Explore Rajasthan's majestic forts where each corner whispers History!","Relax on Goa's golden beaches feeling the warmth of sand!",
       "Drift on a houseboat in Kerala's tranquil backwaters!","Savor the rich flavors of Indian cuisine and immerse in Festivals!","Experience the spiritual serenity of Varanasi's Ganga Aarti!"
 ,"Experience the thrill of trekking in Ladakh's dramatic landscapes!","Unwind in Coorg's lush coffee plantations sipping freshly brewed coffee!","Let India rejuvenate your spirit and leave you with cherished memories."    ]
 
     useEffect(() => {
       const interval = setInterval(() => {
 
-        if (a > 8) {
+        if (a >= 9) {
           a = 0;
         }
         else {
