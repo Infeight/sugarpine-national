@@ -29,7 +29,7 @@
 }
 .blogvideo{
     width: 95vw;
-    height: 65vh;
+    height: 40vw;
     border-radius: 2vw;
     max-width: 5vw 2.5vw;
 }
@@ -54,7 +54,7 @@
     font-family: "Exo 2", sans-serif;
     font-optical-sizing: auto;
     font-weight: 800;
-    font-size: 6rem;
+    font-size: 2.5vw;
     font-style: normal;
     color: #232F3E;
     /* background: linear-gradient(to right, #870033, #ff6b08, #730073, #e9d200); */
@@ -88,7 +88,7 @@
 }
 .blogmatter p{
     height: auto;
-    font-size: 3rem;
+    font-size: 1.5vw;
     margin: auto;
     box-sizing: border-box;
     padding: 0rem 2rem;
@@ -111,9 +111,16 @@
     font-style: normal;
     font-size: 1.6vw;
 }
+@media screen and (min-width:1025px) {
+    @media screen and (max-width:1200px) {
+        html{font-size: 21%;}
+      
+    
+    }
+}
 
 @media screen and (min-width:700px) {
-    @media screen and (max-width:1200px) {
+    @media screen and (max-width:1024px) {
         .travelblogcover{
             height: 40vh;
             margin-top: 2vw;
@@ -122,10 +129,10 @@
             width: 70vw;
         }
         .blogtitle h3{
-            font-size: 2.5vw;
+            font-size: 3vw;
         }
         .blogmatter p{
-            font-size: 1.5vw;
+            font-size: 2.5vw;
         }
         .blogcover{
             width: 90vw;

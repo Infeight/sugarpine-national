@@ -78,6 +78,12 @@ position: relative;
   box-shadow: 0vw 0vw 10vw black;
 
 }
+@media screen and (min-width:1200px) {
+  @media screen and (max-width:1400px) {
+    .brand-name{
+      font-size: 6rem;
+    }
+  }}
 
 .coverimage {
   margin: 0 7vw;
@@ -122,10 +128,10 @@ position: relative;
   width: 90%;
   background-color: rgb(255, 255, 255);
   box-shadow: 0rem 0.5rem 1.5rem inset;
-  height: 6rem;
+  height: 2.5vw;
   border-radius: 1rem;
   color: rgb(0, 0, 0);
-  font-size: 3.5rem;
+  font-size: 1.5vw;
   margin-left: 5%;
   margin-bottom: 2rem;
   border: none;
@@ -139,7 +145,7 @@ position: relative;
   font-optical-sizing: auto;
   font-weight: 600;
   cursor: pointer;
-  font-size: 3rem;
+  font-size: 1.3vw;
   margin-left: 30%;
   border-radius: 1rem;
   box-shadow: 0rem 0.5rem 1.5rem;
@@ -150,7 +156,7 @@ position: relative;
 .signin-cap {
   font-size: 2vw;
   position: relative;
-  top: -15rem;
+  top: -6vw;
   text-align: center;
   color: white;
   font-weight: 600;
@@ -195,7 +201,7 @@ position: relative;
   font-family: "Exo 2", sans-serif;
   font-optical-sizing: auto;
   font-weight: 900;
-  font-size: 3.5rem;
+  font-size: 1.5vw;
   font-style: normal;
   /* background: linear-gradient(to right, #870033, #ff6b08, #730073, #e9d200);
   -webkit-text-fill-color: transparent;
@@ -251,9 +257,139 @@ position: relative;
     top: 0vh;
   }
 }
+@media screen and (min-width:1025px) {
+  @media screen and (max-width:1200px) {
+    html {
+      font-size: 21%;
+    }
+    
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    
+    body::-webkit-scrollbar {
+      display: none;
+    }
+    
+    
+    
+    
+    .head-back {
+      max-width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #ffd86a;
+      background-image: url('../../public/coverdoodle.png');
+    
+      /* background-size: contain; */
+      /* background-repeat: no-repeat; */
+    
+    }
+    
+    .brand-cont {
+      width: 60%;
+      display: flex;
+      height: 100%;
+      /* align-items: center; */
+      flex-direction: column;
+    
+      /* background-image: url('loginpagecover.jpg');
+    background-repeat: no-repeat;
+    background-size: contain; */
+    position: relative;
+      justify-content: center;
+    
+    
+      animation: brandcont 1s  1 ease;
+    }
+    
+    @keyframes brandcont {
+      from{
+        left: 100%;
+      }
+      to{
+        left: 0;
+      }
+    }
+    
+    .brand-name {
+      height: 80vh;
+      position: relative;
+      font-family: "Exo 2", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 900;
+      font-size: 3.6vw;
+      font-style: normal;
+      /* background: linear-gradient(to right, #000000, #ff0000);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; */
+      top: 10vh;
+      left: 2rem;
+      letter-spacing: 1rem;
+      color: white;
+      background-color: #232F3E;
+      border-radius: 5rem 0rem 0rem 0rem;
+      padding: 2rem;
+      box-sizing: border-box;
+      box-shadow: 0vw 0vw 10vw black;
+    
+    }
+  
+    
+    .coverimage {
+      margin: 0 7vw;
+      height: 75%;
+    }
+    .coverimagelogin{
+      display: none;
+    }
+    
+    .login-form {
+      /* backdrop-filter: unset; */
+      /* height: 30rem; */
+      margin: 0rem auto;
+      top: -20vw;
+      border-radius: 3rem;
+      width: 30vw;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      justify-content: center;
+      background-color: #232F3E;
+      padding-top: 30vh;
+      padding-bottom: 5vh;
+      animation: login 1s 1 ease;
+  }
+
+    
+    .main-head-img {
+      width: 40%;
+      height: 100%;
+      background-color: white;
+      position: relative;
+      /* left: 30%; */
+    
+    }
+    
+    
+    .welcomediv {
+      max-width: 100%;
+      position: relative;
+      text-align: center;
+      top: 2rem;
+      color: aliceblue;
+      font-size: 4rem;
+      font-family: monospace;
+    } 
+  
+  }
+}
 
 @media screen and (min-width:700px) {
-  @media screen and (max-width:1200px) {
+  @media screen and (max-width:1024px) {
     html {
       font-size: 21%;
     }

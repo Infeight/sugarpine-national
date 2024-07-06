@@ -50,8 +50,15 @@
         -webkit-background-clip: text;
     }
 }
-@media screen and (min-width:700px) {
+
+@media screen and (min-width:1025px) {
     @media screen and (max-width:1200px) {
+        html{font-size: 21%;}
+    }
+}
+
+@media screen and (min-width:700px) {
+    @media screen and (max-width:1024px) {
        .about{
         font-size: 2.5vw;
         color: #232F3E;

@@ -19,7 +19,7 @@
     font-optical-sizing: auto;
     font-style: normal;
     font-size: 1.2vw;
-    height: 80vh;
+    height: auto;
      margin:7vw auto -5vw;
      animation: contactdet 1.5s 1 ease;
 }
@@ -130,16 +130,26 @@
     cursor: pointer;
     /* left: 60vw; */
 }
-@media screen and (min-width:700px) {
+@media screen and (min-width:1025px) {
     @media screen and (max-width:1200px) {
+        html{font-size: 21%;}
+    }
+    .contactdet{height: auto;}
+    
+}
+@media screen and (min-width:700px) {
+    @media screen and (max-width:1024px) {
         .loginwarn{font-size: 3vw;}
         .myimg{
             margin: 5vw auto 0;
             width: 30vw;
             height: 30vw;
         }
+        .contactdet{
+            height: auto;
+        }
         .contactusinfo{
-            font-size: 2.5vw;
+            font-size: 2.2vw;
         }
         .contactusinfo h3{
             font-size: 3vw;

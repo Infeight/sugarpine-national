@@ -1,7 +1,7 @@
 .foot{
     max-width: 100%;
     display: grid;
-    height: 55rem;
+    height: 25vw;
     /* background-color: #869b5b; */
     background: #ffd86a;
     position: relative;
@@ -12,7 +12,7 @@
 }
 
 .brandname{
-    font-size: 20rem;
+    font-size: 8vw;
     font-family: "Exo 2", sans-serif;
     font-optical-sizing: auto;
     font-weight: 900;
@@ -46,7 +46,7 @@
 }
 .footerdesc{
     
-    font-size: 3.5rem;
+    font-size: 1.5vw;
     position: relative;
     /* left: 5rem; */
     /* right: 5%; */
@@ -58,19 +58,93 @@
 }
 .followus{
     max-width: fit-content;
-    font-size: 5rem;
+    font-size: 2vw;
     font-family: "Exo 2", sans-serif;
     font-optical-sizing: auto;
     position: relative;
-    left: 5rem;
+    left: 0rem;
     top: 12rem;
     display: flex;
     color: #232F3E;
     cursor: pointer;
 }
+@media screen and (min-width:1025px) {
+    @media screen and (max-width:1200px) {
+        html{font-size: 21%;}
+        /* .foot{
+            max-width: 100%;
+            display: grid;
+            height: 55rem;
+          
+            background: #ffd86a;
+            position: relative;
+            top: 30rem;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: max-content;
+            
+        } */
+        
+        .brandname{
+            font-size: 6vw;
+            font-family: "Exo 2", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 900;
+            position: relative;
+            /* color: #b46d10; */
+            top: 5rem;
+            left: 2rem;
+            grid-row: 1 / span3;
+            background: #0000004a;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            height: fit-content;
+            /* animation: brand-color 10s infinite  ease; */
+        }
+        @keyframes brand-color {
+            0%{
+                background: linear-gradient(to right, #dd528d, #ff8c79, #fbae52);
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+            }
+            50%{
+                background:  linear-gradient(to right, #6d440f, #7d4c0c,#bf7419);
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+            }
+            100%{
+                background: linear-gradient(to right, #f47595, #b15a9a,#643ba2);
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+            }
+        }
+        .footerdesc{
+            
+            font-size: 1.5vw;
+            position: relative;
+            /* left: 5rem; */
+            /* right: 5%; */
+            top: 14rem;
+            color: #232F3E;
+            font-family: "Exo 2", sans-serif;
+            font-optical-sizing: auto;
+            height: fit-content;
+        }
+        .followus{
+            max-width: fit-content;
+            font-size: 2vw;
+            font-family: "Exo 2", sans-serif;
+            font-optical-sizing: auto;
+            position: relative;
+            left: 0rem;
+            top: 12rem;
+            display: flex;
+            color: #232F3E;
+            cursor: pointer;
+        }
+    }}
 
 @media screen and (min-width:700px) {
-    @media screen and (max-width:1200px) {
+    @media screen and (max-width:1024px) {
         html{
             font-size: 21%;
         }
@@ -78,12 +152,12 @@
             height: 65rem;
         }
         .brandname{
-            font-size: 7vw;
+            font-size: 8vw;
             left: 10rem;
         }
         .footerdesc{
             /* max-width: 65%; */
-            font-size: 2vw;
+            font-size: 2.5vw;
             top: 15rem;
             /* left: 75rem;
             top: -25rem; */

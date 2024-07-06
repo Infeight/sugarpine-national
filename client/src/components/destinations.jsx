@@ -513,11 +513,13 @@ const Destinations = () => {
             <Destimages /> : <></>}
           <div className='searchlinks' style={{}}>
             {(wikitrue == true && wikipagepresent == false) ?
-              wikisearches ? wikisearches.map(wikidatas => {
+            
+             ( wikisearches.length!=0 ? wikisearches.map(wikidatas => {
+
                 return <Link className='' onClick={() => { showpages(wikidatas) }}>
                   <li data-icon="😔"> {wikidatas.title} </li>
                 </Link>
-              }) : <div>Sorry, No information found😔</div> : <></>}
+              }) :  <div style={{}} className='wikifallback'><img src="wikifallback.png" alt="" />Sorry, No data found😔</div> ): <></>}
           </div>
 
           {
