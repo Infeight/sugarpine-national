@@ -149,7 +149,7 @@
             font-size: 21%;
         }
         .foot{
-            height: 65rem;
+            height: 30vw;
         }
         .brandname{
             font-size: 8vw;
@@ -204,7 +204,7 @@
         .foot{
             display: flex;
             flex-direction: column;
-            height: 90vw;
+            height: 60vw;
         }
         .brandname{
             left: 2.5vw;

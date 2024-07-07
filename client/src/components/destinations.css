@@ -1651,7 +1651,7 @@ design-back-color {
        }
         .checkedoutimg{
             flex-direction: column;
-            height: 50vh;
+            height: auto;
         }
         .checkedoutimg section{
             font-size: 4vw;

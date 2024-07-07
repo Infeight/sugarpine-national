@@ -106,7 +106,8 @@ const Destinations = () => {
     Checkout: dates.outdate,
     Total_price: ` ${((Number.parseInt(guidedata.guideprice?guidedata.guideprice:0) / 2) * (Number.parseInt(noofdays.days))) + (Number.parseInt((triphotels.hotelprice?triphotels.hotelprice:0)) * (Number.parseInt(noofdays.days))) + ((Number.parseInt(transport.transportprice?transport.transportprice:0)) * Number.parseInt(noofdays.days))}`
   }
-
+  
+  const [loadcheckout,setLoadcheckout] = useState(true)
   const [checkoutsuccess, setCheckoutsuccess] = useState(false)
 
   //FUNCTIONS//
@@ -340,6 +341,7 @@ const Destinations = () => {
 
   const sendEmail = (e) => {
     // console.log(totaltrip)
+    setLoadcheckout(true)
     emailjs.sendForm('service_zu6kd9m', 'template_71rje2i', form.current, {
       publicKey: '0jDVFv-PznKuOziiu',
     })
@@ -347,10 +349,12 @@ const Destinations = () => {
         () => {
           console.log('SUCCESS!');
           setCheckoutsuccess(true)
+          setLoadcheckout(false)
         },
         (error) => {
           console.log('FAILED...', error.text);
           setCheckoutsuccess(false)
+          setLoadcheckout(false)
         },
       );
 
@@ -482,10 +486,22 @@ const Destinations = () => {
 
           
         </section>
+        {loadcheckout == true?
+       <div className='checkedoutimg' style={{position:"absolute"}}>
+        <img src="loadcheckout.png" alt="loading image" />
+        <div>
+          <h2>Loading...</h2>
+               <section>Please wait while your checkout is processing.</section>
+              <section>In the mean time try suggesting about your previous experiences on home page.</section>
+              <section>-SUGARPINE NATIONAL</section>
+            </div>
+            
+       </div>  : <div></div>
+      }
         {checkoutsuccess == true ?
           <div className='checkedoutimg' id='checkedoutimg' style={{ position: "absolute" }}>
             <img src="checkedout.avif" alt="" />
-            
+          
             <div>
             <button id='checkoutclose' style={{cursor:"pointer"}} onClick={closecheckout}>Close</button>
               <h2>Checked out Successfully!</h2>

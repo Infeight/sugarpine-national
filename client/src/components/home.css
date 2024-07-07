@@ -610,43 +610,7 @@
         .suggestions-disp::-webkit-scrollbar{
             display: none;
         }
-        /* .suggestion-desc{
-            width: 30%;
-            height: 98%;
-            background-color: transparent;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .suggestion-desc input{
-            width: 90%;
-            height: 5rem;
-            border-radius: 1rem;
-            border: 2px solid #232F3E;
-            outline: none;
-            font-size: 1.5vw;
-            margin-bottom: 1rem;
-            padding-left: 1rem;
-            font-family: "Exo 2", sans-serif;
-          font-optical-sizing: auto;
-            color: #232F3E;
-        }
-        .suggestion-desc textarea{
-            min-width: 90%;
-            min-height: 70%;
-            max-width: 75%;
-            overflow-x: hidden;
-            overflow-y: scroll;
-            border-radius: 1rem;
-            border: 2px solid #232F3E;
-            outline: none;
-            font-size: 3rem;
-            font-family: "Exo 2", sans-serif;
-          font-optical-sizing: auto;
-            padding-left: 1rem;
-            color: #232F3E;
-        } */
+     
         .suggestion-desc textarea::-webkit-scrollbar{
             display: none;
         }
@@ -687,23 +651,7 @@
             overflow-x: hidden;
             color: #232F3E;
         }
-        /* #suggest{
-            width: 90%;
-            margin-top: 0.5rem;
-            font-size: 3rem;
-            border-radius: 1rem;
-            background: whitesmoke;
-            font-family: "Exo 2", sans-serif;
-          font-optical-sizing: auto;
-            outline: none;
-            animation-duration: 0.4s;
-            transition-property:all ;
-            transition-duration: 0.5s;
-
-            border: 2px solid #232F3E;
-            animation-iteration-count: 1;
-            cursor: pointer;
-        } */
+      
         #suggest:hover{
             background: linear-gradient(45deg
             ,#ffd86a, transparent); 
@@ -815,6 +763,9 @@
             padding: 0;
             color: whitesmoke;
 
+        }
+        .suggestions{
+            height: 60vw;
         }
         .suggestions h2{
             font-size: 4vw;
