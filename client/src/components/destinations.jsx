@@ -107,7 +107,7 @@ const Destinations = () => {
     Total_price: ` ${((Number.parseInt(guidedata.guideprice?guidedata.guideprice:0) / 2) * (Number.parseInt(noofdays.days))) + (Number.parseInt((triphotels.hotelprice?triphotels.hotelprice:0)) * (Number.parseInt(noofdays.days))) + ((Number.parseInt(transport.transportprice?transport.transportprice:0)) * Number.parseInt(noofdays.days))}`
   }
   
-  const [loadcheckout,setLoadcheckout] = useState(true)
+  const [loadcheckout,setLoadcheckout] = useState(false)
   const [checkoutsuccess, setCheckoutsuccess] = useState(false)
 
   //FUNCTIONS//
