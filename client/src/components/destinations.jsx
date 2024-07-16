@@ -306,11 +306,14 @@ const Destinations = () => {
     setTourspottry(tourspottry)
     e.target.closest(".tourspot").id = 'tourspot-selected'
   }
+
+  // if(noofdays.days==""){document.getElementById("checkout").style.visibility = "hidden"}
   const tripdetails = () => {
     if (loggedindata[0].Email.length == 0) {
       document.getElementById("loginconfirm").style.display = "block"
       if (document.getElementById("noofdays").value == "") {
         document.getElementById("noofdays").style.backgroundColor = "#ffa6a6"
+        // document.getElementById("checkout").style.visibility = "hidden"
       }
     }
     else {
@@ -350,6 +353,7 @@ const Destinations = () => {
           console.log('SUCCESS!');
           setCheckoutsuccess(true)
           setLoadcheckout(false)
+          
         },
         (error) => {
           console.log('FAILED...', error.text);
@@ -363,6 +367,7 @@ const Destinations = () => {
 
   const handledays = (e) => {
     setNoofdays({ ...noofdays, days: e.target.value })
+    document.getElementById("checkout").style.visibility = "visible"
   }
 
   let naemrr; let z = 0;

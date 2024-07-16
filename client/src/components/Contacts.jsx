@@ -14,7 +14,17 @@ const email = localStorage.getItem("logindet-mail")
 
 const sendcomplaint =()=>{
   if(email != "" ){
-    sendEmail();
+   if(form.current.username.value!= "" && form.current.subject.value!=""){ sendEmail();}
+   else{
+    if(form.current.username.value== ""){
+  form.current.username.style.outline = "#f76262 solid 3px"
+    }
+    else if(form.current.subject.value==""){
+      form.current.subject.style.outline = "#f76262 solid 3px"
+    }
+  
+    
+   }
   }
   else{
   document.querySelector(".loginwarn").style.display = "block"
@@ -22,6 +32,8 @@ const sendcomplaint =()=>{
 }
 
 
+
+// console.log(form.current.username)
   const sendEmail = (e) => {
    
     emailjs.sendForm('service_zu6kd9m', 'template_tbk43s6', form.current, {
